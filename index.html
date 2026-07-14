@@ -863,8 +863,9 @@
       color: #fff;
       background: var(--navy);
       box-shadow: 7px 7px 0 var(--blue);
-      align-items: end;
+      align-items: stretch;
     }
+    .market-coverage-copy { align-self: end; }
     .market-coverage .report-kicker { color: var(--green); }
     .market-coverage h3 {
       max-width: 520px;
@@ -880,6 +881,47 @@
       color: rgba(255,255,255,.7);
       font-size: 16px;
       line-height: 1.6;
+    }
+    .market-coverage-side {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 42px;
+    }
+    .any-provider-badge {
+      display: grid;
+      width: 184px;
+      padding: 17px 20px 18px;
+      border: 2px solid #fff;
+      color: var(--navy);
+      background: var(--green);
+      box-shadow: 6px 6px 0 var(--blue);
+      align-self: end;
+    }
+    .any-provider-badge strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 52px;
+      font-weight: 500;
+      letter-spacing: -.055em;
+      line-height: .9;
+      text-transform: uppercase;
+    }
+    .any-provider-badge span {
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .comparison-heading {
+      margin: 0 0 12px !important;
+      color: var(--green) !important;
+      font-size: 10px !important;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
     }
     .comparison-list {
       margin: 0;
@@ -1004,6 +1046,8 @@
       .partner-panel-head { align-items: flex-start; flex-direction: column; gap: 12px; }
       .partner-list { grid-template-columns: 1fr; }
       .market-coverage { grid-template-columns: 1fr; padding: 34px 26px; }
+      .market-coverage-side { gap: 34px; }
+      .any-provider-badge { align-self: start; }
       .section-title { font-size: clamp(44px, 13vw, 62px); }
       .step { grid-template-columns: 44px 1fr; padding: 26px 0; }
       .help-grid { gap: 18px; margin-top: 50px; }
@@ -1154,17 +1198,26 @@
             </article>
 
             <aside class="market-coverage reveal" aria-labelledby="market-coverage-title">
-              <div>
+              <div class="market-coverage-copy">
                 <p class="report-kicker">Beyond the partner list</p>
                 <h3 id="market-coverage-title">See another provider at your address?</h3>
                 <p>Bring us the offer. We can compare its pricing and terms against the available alternatives—even when that provider is not a direct partner.</p>
               </div>
-              <ul class="comparison-list" aria-label="Plan details ConnectPath compares">
-                <li>Promotional price vs. regular rate</li>
-                <li>Equipment and installation fees</li>
-                <li>Contracts and data limits</li>
-                <li>Speed tier and connection type</li>
-              </ul>
+              <div class="market-coverage-side">
+                <div class="any-provider-badge" aria-label="Compare any available provider">
+                  <strong>Any</strong>
+                  <span>available provider</span>
+                </div>
+                <div>
+                  <p class="comparison-heading">What we compare</p>
+                  <ul class="comparison-list" aria-label="Plan details ConnectPath compares">
+                    <li>Promotional price vs. regular rate</li>
+                    <li>Equipment and installation fees</li>
+                    <li>Contracts and data limits</li>
+                    <li>Speed tier and connection type</li>
+                  </ul>
+                </div>
+              </div>
             </aside>
           </div>
 
