@@ -754,6 +754,104 @@
     .benefit h2 { margin-top: 38px; font-family: Georgia, "Times New Roman", serif; font-size: 30px; font-weight: 500; letter-spacing: -.035em; }
     .benefit p { color: #354255; font-size: 16px; }
 
+    .partners {
+      padding: 122px 0 132px;
+      color: var(--ink);
+      background: var(--soft);
+      border-bottom: 2px solid var(--ink);
+    }
+    .partners-intro {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: clamp(50px, 8vw, 120px);
+      align-items: end;
+    }
+    .partners .eyebrow { color: var(--blue); }
+    .partners .section-title { max-width: 760px; }
+    .partners-copy {
+      margin: 0;
+      color: #354255;
+      font-size: 19px;
+      line-height: 1.65;
+    }
+    .partners-copy strong { color: var(--ink); }
+    .partner-directory {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, .85fr);
+      gap: 24px;
+      margin-top: 72px;
+      align-items: start;
+    }
+    .partner-panel {
+      padding: 30px 32px 28px;
+      border: 2px solid var(--ink);
+      background: var(--white);
+      box-shadow: 7px 7px 0 var(--ink);
+    }
+    .partner-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 22px;
+    }
+    .partner-panel h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+      font-weight: 500;
+      letter-spacing: -.035em;
+    }
+    .partner-badge {
+      padding: 6px 9px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: var(--green);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .partner-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: 0;
+      padding: 0;
+      border-top: 2px solid var(--ink);
+      list-style: none;
+    }
+    .partner-list li {
+      position: relative;
+      padding: 13px 12px 13px 19px;
+      border-bottom: 1px solid var(--line);
+      color: #2c394c;
+      font-size: 15px;
+      font-weight: 750;
+    }
+    .partner-list li::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: 22px;
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      transform: rotate(45deg);
+    }
+    .partner-stack { display: grid; gap: 24px; }
+    .partner-stack .partner-panel { box-shadow: 5px 5px 0 var(--ink); }
+    .partner-stack .partner-panel:nth-child(2) { background: #dfe9ff; }
+    .partner-stack .partner-panel:nth-child(3) { background: var(--green); }
+    .partner-stack .partner-panel:nth-child(3) .partner-badge { background: var(--white); }
+    .partner-stack .partner-list { grid-template-columns: 1fr; }
+    .partner-note {
+      margin: 26px 0 0;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
     .how { position: relative; overflow: hidden; padding: 126px 0 136px; color: #fff; background: var(--navy); }
     .how::before {
       content: "CONNECT / COMPARE / CLARIFY";
@@ -828,6 +926,8 @@
       .connection-report { width: min(100%, 560px); transform: none; }
       .benefit-grid { grid-template-columns: 1fr; }
       .benefit { min-height: auto; border-right: 0 !important; border-bottom: 2px solid var(--ink); }
+      .partners-intro { grid-template-columns: 1fr; }
+      .partner-directory { grid-template-columns: 1fr; }
       .how-grid { grid-template-columns: 1fr; }
       .help-grid { grid-template-columns: 1fr; }
       .help-card, .help-card:nth-child(2), .help-card:nth-child(3) { min-height: auto; margin-top: 0; }
@@ -849,7 +949,11 @@
       .hero-note { max-width: none; text-align: left; }
       .connection-report { padding: 24px 22px; box-shadow: 8px 9px 0 rgba(17,26,43,.13); }
       .benefit { padding: 42px 5vw; }
-      .how, .who { padding: 92px 0 100px; }
+      .partners, .how, .who { padding: 92px 0 100px; }
+      .partner-directory { gap: 18px; margin-top: 50px; }
+      .partner-panel { padding: 26px 24px 24px; }
+      .partner-panel-head { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .partner-list { grid-template-columns: 1fr; }
       .section-title { font-size: clamp(44px, 13vw, 62px); }
       .step { grid-template-columns: 44px 1fr; padding: 26px 0; }
       .help-grid { gap: 18px; margin-top: 50px; }
@@ -894,6 +998,7 @@
         </a>
         <div class="header-actions">
           <nav class="primary-nav" aria-label="Primary navigation">
+            <a href="#partners">Partners</a>
             <a href="#how-it-works">Our approach</a>
             <a href="#who-we-help">Who we help</a>
           </nav>
@@ -959,6 +1064,80 @@
           <h2>Plain-English tradeoffs</h2>
           <p>Speed, price, equipment, contracts, and reliability—organized around what matters to you.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="partners" id="partners" aria-labelledby="partners-title">
+      <div class="container">
+        <div class="partners-intro reveal">
+          <div>
+            <p class="eyebrow">Direct partner network</p>
+            <h2 class="section-title" id="partners-title">Partner access. Market-wide perspective.</h2>
+          </div>
+          <p class="partners-copy"><strong>These providers are direct ConnectPath partners.</strong> We can also compare pricing from any provider available at your address, so the recommendation starts with fit—not a limited carrier list.</p>
+        </div>
+
+        <div class="partner-directory">
+          <article class="partner-panel reveal">
+            <div class="partner-panel-head">
+              <h3>Internet</h3>
+              <span class="partner-badge">Direct partners</span>
+            </div>
+            <ul class="partner-list">
+              <li>altafiber</li>
+              <li>AT&amp;T Residential</li>
+              <li>AT&amp;T Business</li>
+              <li>Brightspeed</li>
+              <li>EarthLink</li>
+              <li>Fidium Fiber</li>
+              <li>Hawaiian Telcom</li>
+              <li>Kinetic</li>
+              <li>Optimum</li>
+              <li>Optimum Business</li>
+              <li>Ripple Fiber</li>
+              <li>Viasat</li>
+              <li>WOW!</li>
+              <li>Ziply Fiber</li>
+            </ul>
+            <p class="partner-note">Provider availability, service type, and offer details vary by address.</p>
+          </article>
+
+          <div class="partner-stack">
+            <article class="partner-panel reveal">
+              <div class="partner-panel-head">
+                <h3>Video</h3>
+                <span class="partner-badge">Direct partners</span>
+              </div>
+              <ul class="partner-list">
+                <li>DIRECTV Residential</li>
+                <li>DIRECTV for Business</li>
+                <li>DIRECTV Hospitality</li>
+                <li>DIRECTV Multifamily</li>
+              </ul>
+            </article>
+
+            <article class="partner-panel reveal">
+              <div class="partner-panel-head">
+                <h3>Wireless</h3>
+                <span class="partner-badge">Direct partners</span>
+              </div>
+              <ul class="partner-list">
+                <li>AT&amp;T Residential</li>
+                <li>AT&amp;T Business</li>
+              </ul>
+            </article>
+
+            <article class="partner-panel reveal">
+              <div class="partner-panel-head">
+                <h3>Protection</h3>
+                <span class="partner-badge">Direct partner</span>
+              </div>
+              <ul class="partner-list">
+                <li>Vivint</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1044,6 +1223,7 @@
         <span class="footer-disclaimer">© <span id="year"></span> ConnectPath. ConnectPath is an internet service marketplace, not an internet service provider. Availability, pricing, and terms are set by providers and vary by address.</span>
         <nav class="footer-links" aria-label="Footer links">
           <a href="tel:+18284708639">Call</a>
+          <a href="#partners">Partners</a>
           <a href="#how-it-works">How it works</a>
           <a href="#who-we-help">Who we help</a>
         </nav>
