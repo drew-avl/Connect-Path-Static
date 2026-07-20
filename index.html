@@ -584,6 +584,7 @@
       box-shadow: 8px 8px 0 rgba(17,26,43,.14);
     }
     .logo-mark {
+      flex: 0 0 auto;
       width: 44px;
       height: 44px;
       padding: 3px;
@@ -616,6 +617,7 @@
       text-transform: uppercase;
     }
     .primary-nav a:hover { color: #fff; }
+    .mobile-section-nav { display: none; }
     .header-call {
       min-height: 46px;
       padding: 0 18px;
@@ -1048,6 +1050,78 @@
       line-height: 1.1;
     }
     .service-row p { margin: 0; color: #4c596b; font-size: 15px; line-height: 1.58; }
+    .it-difference {
+      display: grid;
+      grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+      margin-top: 34px;
+      border: 2px solid var(--ink);
+      color: #fff;
+      background: var(--navy);
+      box-shadow: 7px 7px 0 var(--blue);
+    }
+    .difference-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 36px 34px;
+    }
+    .difference-kicker {
+      margin: 0 0 18px;
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .difference-copy h3 {
+      max-width: 430px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 3.2vw, 46px);
+      font-weight: 500;
+      letter-spacing: -.045em;
+      line-height: 1.03;
+    }
+    .difference-copy p:last-child {
+      margin: 20px 0 0;
+      color: rgba(255,255,255,.66);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .difference-list {
+      margin: 0;
+      border-left: 1px solid rgba(255,255,255,.24);
+    }
+    .difference-row {
+      display: grid;
+      grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+      gap: 26px;
+      align-items: center;
+      min-height: 104px;
+      padding: 22px 28px;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+    .difference-row:last-child { border-bottom: 0; }
+    .difference-row dt {
+      color: rgba(255,255,255,.58);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .difference-row dd {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 8px;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+    .difference-row dd::before {
+      color: var(--green);
+      content: "→";
+      font-size: 18px;
+      line-height: 1.1;
+    }
     .it-review-strip {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -1198,6 +1272,30 @@
 
     @media (max-width: 1050px) {
       .primary-nav { display: none; }
+      .mobile-section-nav {
+        display: flex;
+        width: var(--container);
+        margin: 14px auto 0;
+        overflow-x: auto;
+        border: 2px solid var(--ink);
+        background: var(--white);
+        box-shadow: 4px 4px 0 var(--green);
+        scrollbar-width: none;
+      }
+      .mobile-section-nav::-webkit-scrollbar { display: none; }
+      .mobile-section-nav a {
+        flex: 1 0 auto;
+        padding: 12px 18px;
+        border-right: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: .08em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .mobile-section-nav a:last-child { border-right: 0; }
+      .mobile-section-nav a:active { color: #fff; background: var(--blue); }
       .hero-content { grid-template-columns: 1fr; min-height: auto; }
       .connection-report { --report-tilt: 0deg; --report-counter-tilt: 0deg; width: min(100%, 560px); }
       .benefit-grid { grid-template-columns: 1fr; }
@@ -1245,6 +1343,10 @@
       .service-row { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
       .service-code { font-size: 17px; }
       .service-row h3 { font-size: 24px; }
+      .it-difference { grid-template-columns: 1fr; }
+      .difference-copy { padding: 30px 26px; }
+      .difference-list { border-top: 1px solid rgba(255,255,255,.24); border-left: 0; }
+      .difference-row { grid-template-columns: 1fr; gap: 9px; min-height: auto; padding: 22px 24px; }
       .it-review-strip { grid-template-columns: 1fr; padding: 28px 24px; }
       .it-review-strip .button { width: 100%; }
       .industry-grid { grid-template-columns: 1fr; gap: 18px; }
@@ -1305,6 +1407,12 @@
           </a>
         </div>
       </header>
+
+      <nav class="mobile-section-nav" aria-label="Section navigation">
+        <a href="#managed-it">IT services</a>
+        <a href="#industries">Industries</a>
+        <a href="#connectivity">Connectivity</a>
+      </nav>
 
       <div id="top" class="hero-content container">
         <div class="hero-copy reveal visible">
@@ -1408,6 +1516,32 @@
             <h3>Automation &amp; Operations</h3>
             <p>Alerts, tickets, onboarding, and repeated tasks turned into clean, trackable workflows.</p>
           </article>
+        </div>
+
+        <div class="it-difference reveal" aria-labelledby="difference-title">
+          <div class="difference-copy">
+            <p class="difference-kicker">What should feel different</p>
+            <h3 id="difference-title">Fewer repeat problems. More written answers.</h3>
+            <p>Support should leave the business easier to run than it was before the ticket opened.</p>
+          </div>
+          <dl class="difference-list">
+            <div class="difference-row">
+              <dt>The same issue returns next week</dt>
+              <dd>The root cause becomes a documented fix and standard</dd>
+            </div>
+            <div class="difference-row">
+              <dt>Access accumulates as staff changes</dt>
+              <dd>MFA, administrator roles, onboarding, and offboarding get cleaned up</dd>
+            </div>
+            <div class="difference-row">
+              <dt>Vendor and recovery details live in one person’s head</dt>
+              <dd>Assets, vendors, ownership, and recovery steps are written down</dd>
+            </div>
+            <div class="difference-row">
+              <dt>Security arrives as another bundle of tools</dt>
+              <dd>Controls are prioritized by actual risk and maintained over time</dd>
+            </div>
+          </dl>
         </div>
 
         <div class="it-review-strip reveal">
