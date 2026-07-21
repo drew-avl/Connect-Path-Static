@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#171d31" />
+  <meta name="theme-color" content="#111a2b" />
   <meta name="description" content="ConnectPath provides secure, documented managed IT for Western North Carolina businesses, with provider comparison and connectivity sourcing when the connection itself needs attention." />
   <meta property="og:title" content="ConnectPath | Managed IT and connectivity" />
   <meta property="og:description" content="Managed Microsoft 365, devices, networks, cybersecurity, documentation, and support—with connectivity sourcing from the same local team." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://connect-path.com/" />
-  <meta property="og:image" content="https://connect-path.com/assets/connectpath-social-card-v3.png" />
-  <meta property="og:image:width" content="1732" />
-  <meta property="og:image:height" content="908" />
+  <meta property="og:image" content="https://connect-path.com/assets/connectpath-social-card-v4.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="ConnectPath managed IT and connectivity services." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://connect-path.com/assets/connectpath-social-card-v3.png" />
-  <link rel="icon" type="image/png" href="assets/connectpath-logo-v2.png" />
-  <link rel="apple-touch-icon" href="assets/connectpath-logo-v2.png" />
+  <meta name="twitter:image" content="https://connect-path.com/assets/connectpath-social-card-v4.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/connectpath-logo-v3.svg" />
+  <link rel="apple-touch-icon" href="assets/connectpath-logo-v3.png" />
   <link rel="canonical" href="https://connect-path.com/" />
   <title>ConnectPath | Managed IT and connectivity</title>
   <style>
@@ -585,18 +585,18 @@
     }
     .logo-mark {
       flex: 0 0 auto;
-      width: 44px;
-      height: 44px;
-      padding: 3px;
-      border: 1px solid rgba(17,26,43,.18);
-      border-radius: 3px;
-      background: var(--white);
-      box-shadow: 3px 3px 0 var(--green);
+      width: 46px;
+      height: 46px;
+      padding: 4px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: #f6f1e7;
+      box-shadow: 4px 4px 0 var(--green);
       filter: none;
     }
     .logo-name {
       font-family: "Arial Narrow", "Aptos Display", "Segoe UI", sans-serif;
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: -.025em;
     }
@@ -606,7 +606,18 @@
       font-style: italic;
       font-weight: 500;
     }
-    .logo-tag { color: rgba(255,255,255,.56); }
+    .logo-tag {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255,255,255,.56);
+    }
+    .logo-tag::before {
+      content: "";
+      width: 13px;
+      height: 2px;
+      background: var(--blue);
+    }
     .header-actions { display: flex; align-items: center; gap: 24px; }
     .primary-nav { display: flex; align-items: center; gap: 20px; }
     .primary-nav a {
@@ -1215,7 +1226,24 @@
       white-space: nowrap;
     }
     .how-grid { position: relative; grid-template-columns: .86fr 1.14fr; gap: clamp(70px, 9vw, 150px); }
-    .eyebrow { margin-bottom: 22px; color: var(--green); font-size: 12px; letter-spacing: .16em; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 22px;
+      color: var(--green);
+      font-size: 12px;
+      letter-spacing: .16em;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      flex: 0 0 auto;
+      border: 1px solid currentColor;
+      background: var(--green);
+      box-shadow: 2px 2px 0 var(--blue);
+    }
     .section-title {
       color: inherit;
       font-family: Georgia, "Times New Roman", serif;
@@ -1384,11 +1412,11 @@
         <path d="M590 -140 C 560 130, 655 430, 950 660 S 1340 840, 1750 980" fill="none" stroke="#4a57ff" stroke-opacity=".14" stroke-width="4"/>
         <path d="M515 -90 C 500 150, 585 460, 865 675 S 1260 850, 1650 950" fill="none" stroke="#5cc56a" stroke-opacity=".08" stroke-width="5"/>
       </svg>
-      <img class="hero-watermark" src="assets/connectpath-logo-v2.png" alt="" aria-hidden="true" />
+      <img class="hero-watermark" src="assets/connectpath-logo-v3.svg" alt="" aria-hidden="true" />
 
       <header class="header container">
         <a class="logo" href="#top" aria-label="ConnectPath home">
-          <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
+          <img class="logo-mark" src="assets/connectpath-logo-v3.svg" alt="" />
           <span class="logo-copy">
             <span class="logo-name">Connect<span>Path</span></span>
             <span class="logo-tag">Managed IT + connectivity</span>
@@ -1820,7 +1848,7 @@
       </div>
       <footer class="footer container">
         <a class="logo" href="#top" aria-label="ConnectPath home">
-          <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
+          <img class="logo-mark" src="assets/connectpath-logo-v3.svg" alt="" />
           <span class="logo-copy">
             <span class="logo-name">Connect<span>Path</span></span>
             <span class="logo-tag">Managed IT + connectivity</span>
