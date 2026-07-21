@@ -1222,6 +1222,165 @@
     .footer { padding: 34px 0 38px; color: rgba(255,255,255,.92); }
     .footer-disclaimer { max-width: 440px; font-size: 12px; line-height: 1.55; }
 
+    /* Semantic color boundaries: every surface owns its foreground color. */
+    :root {
+      --surface-dark: #111a2b;
+      --surface-dark-raised: #1a2741;
+      --surface-paper: #fffef9;
+      --surface-warm: #f7f3e9;
+      --surface-cool: #e8efff;
+      --text-primary: #111a2b;
+      --text-muted: #46556a;
+      --text-on-dark: #f7f9ff;
+      --text-on-dark-muted: #c2cbd8;
+      --accent-blue: #3157f6;
+      --accent-lime: #c8f45a;
+      --border-light: #c8cfda;
+      --border-dark: #536078;
+      --ink: var(--text-primary);
+      --ink-soft: var(--text-muted);
+      --navy: var(--surface-dark);
+      --navy-2: var(--surface-dark-raised);
+      --blue: var(--accent-blue);
+      --blue-soft: var(--surface-cool);
+      --green: var(--accent-lime);
+      --line: var(--border-light);
+      --cream: var(--surface-warm);
+      --white: var(--surface-paper);
+    }
+
+    body { color: var(--text-primary); background: var(--surface-warm); }
+    a { color: inherit; }
+
+    /* Dark surfaces */
+    .hero,
+    .header,
+    .it-difference,
+    .operating-method,
+    .closing,
+    .mobile-section-nav {
+      color: var(--text-on-dark);
+    }
+    .logo-name,
+    .hero h1,
+    .difference-copy h3,
+    .difference-row dd,
+    .operating-method .section-title,
+    .method-step h3,
+    .closing h2,
+    .footer-links a { color: var(--text-on-dark); }
+    .logo-tag,
+    .primary-nav a,
+    .hero-lead,
+    .hero-contact-lines,
+    .hero-assurances li,
+    .difference-copy p:last-child,
+    .difference-row dt,
+    .method-copy,
+    .method-step p,
+    .closing-grid > div > p:not(.eyebrow),
+    .footer,
+    .footer-disclaimer { color: var(--text-on-dark-muted); }
+    .primary-nav a:hover,
+    .footer-links a:hover { color: var(--accent-lime); }
+
+    /* Light and accent surfaces */
+    .connection-report,
+    .benefits,
+    .benefit,
+    .managed-services,
+    .service-ledger,
+    .provider-details,
+    .review-output,
+    .review-sheet,
+    .review-copy,
+    .review-register,
+    .review-foot,
+    .industries,
+    .industry-card,
+    .who,
+    .help-card,
+    .questions,
+    .question {
+      color: var(--text-primary);
+    }
+    .connection-report h2,
+    .benefit h2,
+    .service-row h3,
+    .provider-group h4,
+    .review-copy h2,
+    .review-row h3,
+    .industry-card h3,
+    .industry-points li,
+    .help-card h3,
+    .questions h2,
+    .question summary { color: var(--text-primary); }
+    .report-list li,
+    .report-footer,
+    .benefit p,
+    .managed-summary,
+    .service-row p,
+    .provider-group li,
+    .provider-note,
+    .review-copy p:last-child,
+    .review-row p,
+    .review-foot p,
+    .industries-copy,
+    .industry-card > p:not(.industry-tag),
+    .help-card p,
+    .questions-intro,
+    .question p { color: var(--text-muted); }
+    .report-kicker,
+    .report-stamp,
+    .review-code,
+    .industry-tag,
+    .managed-services .eyebrow,
+    .industries .eyebrow,
+    .who .eyebrow,
+    .questions .eyebrow { color: var(--accent-blue); }
+    .hero-pill,
+    .header-call,
+    .button:not(.button-secondary),
+    .report-id,
+    .review-copy,
+    .provider-details[open] summary,
+    .mobile-call { color: var(--text-primary); }
+    .service-code,
+    .help-index,
+    .header-call:hover { color: var(--surface-paper); }
+
+    /* Interactive states stay legible instead of relying on inherited color. */
+    .button-secondary { color: var(--text-on-dark); background: transparent; }
+    .button-secondary:hover { color: var(--text-primary); background: var(--surface-paper); }
+    .hero-contact-lines a { color: inherit; }
+    .review-foot a,
+    .questions-intro a { color: var(--text-primary); }
+    .question[open] summary { color: var(--accent-blue); }
+    .provider-details[open] summary { background: var(--accent-lime); }
+    .mobile-section-nav a { color: var(--text-on-dark); }
+    .mobile-section-nav a:hover,
+    .mobile-section-nav a:focus-visible { color: var(--text-primary); background: var(--accent-lime); }
+
+    @media (prefers-contrast: more) {
+      .header,
+      .connection-report,
+      .service-ledger,
+      .it-difference,
+      .review-sheet,
+      .review-foot,
+      .industry-card,
+      .help-card { border-width: 2px; }
+      .hero-lead,
+      .hero-contact-lines,
+      .hero-assurances li,
+      .difference-copy p:last-child,
+      .difference-row dt,
+      .method-copy,
+      .method-step p,
+      .closing-grid > div > p:not(.eyebrow),
+      .footer { color: var(--text-on-dark); }
+    }
+
     #managed-it, #difference, #it-review, #industries, #method, #who-we-help, #questions, #contact { scroll-margin-top: 24px; }
 
     @media (max-width: 1050px) {
