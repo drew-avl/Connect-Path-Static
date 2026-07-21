@@ -272,9 +272,6 @@
       margin-bottom: 28px;
       border-radius: 16px;
     }
-    .icon-box.purple { color: #4b57ff; background: #eef0ff; }
-    .icon-box.blue { color: #5aa8ff; background: #edf7ff; }
-    .icon-box.green { color: #59bf68; background: #eff9f1; }
     .benefit h2,
     .help-card h3 {
       margin: 0;
@@ -321,12 +318,6 @@
       transform: translateY(-6px);
       border-color: #9399a8;
       box-shadow: var(--shadow);
-    }
-    .help-icon {
-      width: 42px;
-      height: 42px;
-      margin-bottom: 30px;
-      color: var(--blue);
     }
     .help-card h3 { font-size: 28px; }
     .help-card p {
@@ -468,11 +459,13 @@
       --navy: #111a2b;
       --navy-2: #1a2741;
       --blue: #3157f6;
+      --blue-soft: #e8efff;
       --sky: #8ebcff;
       --cyan: #22b8df;
       --green: #c8f45a;
       --line: #ccd2dc;
       --soft: #f4f1e8;
+      --cream: #f7f3e9;
       --white: #fffef9;
       --container: min(90vw, 1320px);
       --shadow: 12px 14px 0 rgba(17, 26, 43, .12);
@@ -496,19 +489,22 @@
       transform: translateY(-150%);
     }
     .skip-link:focus { transform: translateY(0); }
-    a:focus-visible, summary:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    .hero a:focus-visible, .operating-method a:focus-visible, .closing a:focus-visible { outline-color: var(--green); }
 
     .hero {
       min-height: auto;
-      color: var(--ink);
+      color: #fff;
       background:
-        linear-gradient(rgba(17,26,43,.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(17,26,43,.045) 1px, transparent 1px),
-        var(--soft);
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
+        radial-gradient(circle at 78% 42%, rgba(49,87,246,.28), transparent 29%),
+        radial-gradient(circle at 18% 84%, rgba(200,244,90,.08), transparent 22%),
+        var(--navy);
       background-size: 42px 42px;
     }
     .hero::before {
-      background: linear-gradient(122deg, transparent 62%, rgba(49,87,246,.075) 62%, rgba(49,87,246,.075) 72%, transparent 72%);
+      background: linear-gradient(122deg, transparent 60%, rgba(49,87,246,.14) 60%, rgba(49,87,246,.14) 72%, transparent 72%);
     }
     .header {
       position: relative;
@@ -516,11 +512,12 @@
       height: 78px;
       margin-top: 20px;
       padding: 0 18px 0 22px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 4px;
       color: #fff;
-      background: var(--navy);
-      box-shadow: 8px 8px 0 rgba(17,26,43,.14);
+      background: rgba(17,26,43,.86);
+      box-shadow: 0 18px 48px rgba(0,0,0,.2);
+      backdrop-filter: blur(14px);
     }
     .logo-mark {
       flex: 0 0 auto;
@@ -530,7 +527,7 @@
       border: 2px solid var(--ink);
       border-radius: 0;
       background: #f6f1e7;
-      box-shadow: 4px 4px 0 var(--green);
+      box-shadow: 4px 4px 0 var(--blue);
       filter: none;
     }
     .logo-name {
@@ -549,18 +546,18 @@
       display: flex;
       align-items: center;
       gap: 7px;
-      color: rgba(255,255,255,.56);
+      color: rgba(255,255,255,.68);
     }
     .logo-tag::before {
       content: "";
       width: 13px;
       height: 2px;
-      background: var(--blue);
+      background: var(--green);
     }
     .header-actions { display: flex; align-items: center; gap: 24px; }
     .primary-nav { display: flex; align-items: center; gap: 20px; }
     .primary-nav a {
-      color: rgba(255,255,255,.72);
+      color: rgba(255,255,255,.78);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: .08em;
@@ -572,37 +569,37 @@
       min-height: 46px;
       padding: 0 18px;
       border: 0;
-      border-radius: 5px;
+      border-radius: 3px;
       color: var(--navy);
       background: var(--green);
       box-shadow: none;
       font-size: 15px;
     }
-    .header-call:hover { color: #fff; background: var(--blue); transform: none; }
+    .header-call:hover { color: #fff; background: var(--blue); transform: translateY(-1px); }
 
     .hero-content {
       display: grid;
       grid-template-columns: minmax(0, 1.18fr) minmax(330px, .72fr);
       gap: clamp(54px, 7vw, 112px);
-      min-height: 730px;
-      padding: 100px 0 112px;
+      min-height: 760px;
+      padding: 104px 0 118px;
     }
     .hero-copy { width: auto; }
     .hero-pill {
       margin-bottom: 28px;
       padding: 8px 12px;
-      border: 1px solid var(--ink);
+      border: 1px solid var(--green);
       border-radius: 3px;
       color: var(--ink);
       background: var(--green);
       font-size: 12px;
       letter-spacing: .14em;
-      box-shadow: 4px 4px 0 var(--ink);
+      box-shadow: 4px 4px 0 var(--blue);
     }
     .hero-pill::before { display: none; }
     h1 {
       max-width: 800px;
-      color: var(--ink);
+      color: #fff;
       font-family: "Arial Narrow", "Aptos Display", "Segoe UI", sans-serif;
       font-size: clamp(62px, 6.2vw, 92px);
       font-weight: 900;
@@ -613,7 +610,7 @@
     h1 .hero-answer {
       display: block;
       margin-top: 12px;
-      color: var(--blue);
+      color: var(--green);
       font-family: Georgia, "Times New Roman", serif;
       font-size: .92em;
       font-style: italic;
@@ -631,7 +628,7 @@
     .hero-lead {
       max-width: 710px;
       margin-top: 34px;
-      color: #354255;
+      color: rgba(255,255,255,.78);
       font-size: clamp(19px, 1.55vw, 23px);
       line-height: 1.55;
     }
@@ -639,46 +636,74 @@
     .button {
       min-height: 62px;
       padding: 0 28px;
-      border: 2px solid var(--ink);
-      border-radius: 6px;
-      background: var(--blue);
-      box-shadow: 6px 6px 0 var(--ink);
+      border: 1px solid var(--green);
+      border-radius: 3px;
+      color: var(--navy);
+      background: var(--green);
+      box-shadow: 5px 5px 0 var(--blue);
       font-size: 17px;
     }
-    .button:hover { filter: none; transform: translate(2px, 2px); box-shadow: 4px 4px 0 var(--ink); }
+    .button:hover { filter: none; transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--blue); }
     .button-secondary {
-      color: var(--ink);
-      background: var(--white);
-      box-shadow: 6px 6px 0 var(--ink);
+      border-color: rgba(255,255,255,.55);
+      color: #fff;
+      background: transparent;
+      box-shadow: none;
     }
-    .button-secondary:hover { color: #fff; background: var(--navy); }
+    .button-secondary:hover { color: var(--navy); background: var(--white); box-shadow: none; }
     .hero-contact-lines {
       display: flex;
       flex-wrap: wrap;
       gap: 12px 26px;
       margin-top: 30px;
-      color: var(--ink-soft);
+      color: rgba(255,255,255,.74);
       font-size: 14px;
     }
-    .hero-contact-lines a { border-bottom: 1px solid rgba(17,26,43,.25); }
-    .hero-contact-lines a:hover { color: var(--blue); }
+    .hero-contact-lines a { border-bottom: 1px solid rgba(255,255,255,.34); }
+    .hero-contact-lines a:hover { color: var(--green); }
     .hero-contact-lines span {
       margin-right: 7px;
-      color: var(--ink);
+      color: var(--green);
       font-size: 10px;
       font-weight: 900;
       letter-spacing: .1em;
       text-transform: uppercase;
     }
+    .hero-assurances {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      max-width: 760px;
+      margin: 34px 0 0;
+      padding: 18px 0 0;
+      border-top: 1px solid rgba(255,255,255,.22);
+      list-style: none;
+    }
+    .hero-assurances li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 8px;
+      padding-right: 18px;
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .hero-assurances span {
+      color: var(--green);
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
     .connection-report {
-      --report-tilt: 1.2deg;
-      --report-counter-tilt: -1.2deg;
+      --report-tilt: -1.4deg;
+      --report-counter-tilt: 1.4deg;
       position: relative;
       align-self: center;
       padding: 28px;
       border: 2px solid var(--ink);
       background: var(--white);
-      box-shadow: var(--shadow);
+      box-shadow: 12px 14px 0 rgba(49,87,246,.76), 0 32px 80px rgba(0,0,0,.24);
       transform: rotate(var(--report-tilt));
     }
     .connection-report::before {
@@ -689,15 +714,27 @@
       top: -13px;
       left: calc(50% - 43px);
       background: rgba(200,244,90,.82);
-      transform: rotate(-2deg);
+      transform: rotate(2.4deg);
     }
+    .report-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 10px; }
     .report-kicker {
-      margin: 0 0 10px;
+      margin: 0;
       color: var(--blue);
       font-size: 11px;
       font-weight: 900;
       letter-spacing: .18em;
       text-transform: uppercase;
+    }
+    .report-id {
+      padding: 5px 7px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: var(--green);
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      white-space: nowrap;
     }
     .connection-report h2 {
       margin: 0;
@@ -737,25 +774,40 @@
       transform-origin: center;
     }
 
-    .benefits { border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: var(--white); }
+    .benefits { border-top: 1px solid rgba(17,26,43,.16); border-bottom: 1px solid rgba(17,26,43,.2); background: var(--white); }
     .benefit-grid { grid-template-columns: 1.2fr 1fr .9fr; }
     .benefit {
+      position: relative;
       min-height: 286px;
       padding: 44px 42px;
-      border-color: var(--ink) !important;
+      border-color: var(--line) !important;
+      background: var(--white) !important;
     }
-    .benefit:nth-child(2) { background: #e5edff; }
-    .benefit:nth-child(3) { background: var(--green); }
-    .icon-box { width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 0; background: #f6f1e7 !important; color: var(--ink) !important; box-shadow: 3px 3px 0 var(--blue); }
-    .benefit h2 { margin-top: 32px; font-family: Georgia, "Times New Roman", serif; font-size: 31px; font-weight: 500; letter-spacing: -.035em; }
+    .benefit::before { position: absolute; top: 0; left: 0; right: 0; height: 5px; content: ""; background: var(--blue); }
+    .benefit:nth-child(2)::before { background: var(--green); }
+    .benefit:nth-child(3)::before { background: var(--navy); }
+    .icon-box {
+      display: inline-flex;
+      width: auto;
+      height: auto;
+      margin-bottom: 0;
+      padding: 8px 10px;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      color: #fff !important;
+      background: var(--navy) !important;
+      box-shadow: none;
+    }
+    .icon-box span { font-family: ui-monospace, "Cascadia Code", monospace; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+    .benefit h2 { margin-top: 28px; font-family: Georgia, "Times New Roman", serif; font-size: 31px; font-weight: 500; letter-spacing: -.035em; }
     .benefit p { color: #354255; font-size: 16px; }
 
     .managed-services {
       padding: 122px 0 132px;
       color: var(--ink);
-      background: #dfe9ff;
+      background: var(--blue-soft);
       border-top: 0;
-      border-bottom: 2px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
     }
     .managed-intro {
       display: grid;
@@ -773,13 +825,13 @@
     }
     .service-ledger {
       margin-top: 72px;
-      border: 2px solid var(--ink);
+      border: 1px solid var(--ink);
       background: var(--white);
-      box-shadow: 8px 8px 0 var(--ink);
+      box-shadow: 0 24px 70px rgba(17,26,43,.13);
     }
     .service-row {
       display: grid;
-      grid-template-columns: 72px minmax(220px, .72fr) minmax(0, 1.28fr);
+      grid-template-columns: 58px minmax(220px, .72fr) minmax(0, 1.28fr);
       gap: 24px;
       align-items: center;
       min-height: 116px;
@@ -789,10 +841,17 @@
     .service-row:last-of-type { border-bottom: 0; }
     .service-row:nth-child(2), .service-row:nth-child(5) { background: rgba(223,233,255,.48); }
     .service-code {
-      color: var(--blue);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      font-weight: 700;
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      min-height: 30px;
+      border: 1px solid var(--blue);
+      color: #fff;
+      background: var(--blue);
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .05em;
     }
     .service-row h3 {
       margin: 0;
@@ -803,7 +862,7 @@
       line-height: 1.1;
     }
     .service-row p { margin: 0; color: #4c596b; font-size: 15px; line-height: 1.58; }
-    .provider-details { border-top: 2px solid var(--ink); background: #f6f1e7; }
+    .provider-details { border-top: 1px solid var(--ink); background: var(--cream); }
     .provider-details summary {
       display: flex;
       align-items: center;
@@ -841,10 +900,10 @@
       display: grid;
       grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
       margin-top: 34px;
-      border: 2px solid var(--ink);
+      border: 1px solid var(--ink);
       color: #fff;
       background: var(--navy);
-      box-shadow: 7px 7px 0 var(--blue);
+      box-shadow: 8px 8px 0 var(--blue);
     }
     .difference-copy {
       display: flex;
@@ -911,16 +970,16 @@
     }
     .review-output {
       padding: 122px 0 132px;
-      border-bottom: 2px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
       color: var(--ink);
-      background: #f6f1e7;
+      background: var(--cream);
     }
     .review-sheet {
       display: grid;
       grid-template-columns: minmax(300px, .78fr) minmax(0, 1.22fr);
-      border: 2px solid var(--ink);
+      border: 1px solid var(--ink);
       background: var(--white);
-      box-shadow: 9px 9px 0 var(--ink);
+      box-shadow: 0 28px 80px rgba(17,26,43,.14);
     }
     .review-copy {
       display: flex;
@@ -928,7 +987,7 @@
       justify-content: space-between;
       min-height: 560px;
       padding: 46px 42px;
-      border-right: 2px solid var(--ink);
+      border-right: 1px solid var(--ink);
       background: var(--green);
     }
     .review-copy .eyebrow { color: var(--ink); }
@@ -970,9 +1029,9 @@
       align-items: center;
       margin-top: 34px;
       padding: 26px 28px;
-      border: 2px solid var(--ink);
+      border: 1px solid var(--ink);
       background: #dfe9ff;
-      box-shadow: 7px 7px 0 var(--blue);
+      box-shadow: 5px 5px 0 var(--blue);
     }
     .review-foot p { margin: 0; color: #39475a; font-size: 15px; }
     .review-foot strong { color: var(--ink); }
@@ -982,7 +1041,7 @@
       padding: 122px 0 136px;
       color: var(--ink);
       background: var(--white);
-      border-bottom: 2px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
     }
     .industries-intro {
       display: grid;
@@ -995,18 +1054,18 @@
     .industry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 72px; }
     .industry-card {
       padding: 34px;
-      border: 2px solid var(--ink);
-      background: var(--soft);
-      box-shadow: 6px 6px 0 var(--ink);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--blue);
+      background: var(--white);
+      box-shadow: 0 18px 50px rgba(17,26,43,.08);
     }
-    .industry-card:nth-child(2) { background: #dfe9ff; }
-    .industry-card:nth-child(3) { background: var(--green); }
+    .industry-card:nth-child(2), .industry-card:nth-child(3) { background: var(--white); }
     .industry-tag { margin: 0; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
-    .industry-card:nth-child(3) .industry-tag { color: var(--ink); }
+    .industry-card:nth-child(3) .industry-tag { color: var(--blue); }
     .industry-card h3 { max-width: 500px; margin: 20px 0 0; font-family: Georgia, serif; font-size: 30px; font-weight: 500; letter-spacing: -.035em; line-height: 1.12; }
     .industry-card > p:not(.industry-tag) { margin: 18px 0 0; color: #465366; line-height: 1.62; }
-    .industry-card:nth-child(3) > p:not(.industry-tag) { color: var(--ink); }
-    .industry-points { display: grid; gap: 0; margin: 28px 0 0; padding: 0; border-top: 2px solid var(--ink); list-style: none; }
+    .industry-card:nth-child(3) > p:not(.industry-tag) { color: #465366; }
+    .industry-points { display: grid; gap: 0; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--ink); list-style: none; }
     .industry-points li { padding: 12px 0; border-bottom: 1px solid rgba(17,26,43,.18); font-size: 14px; font-weight: 750; }
 
     .operating-method {
@@ -1014,7 +1073,7 @@
       overflow: hidden;
       padding: 122px 0 132px;
       color: #fff;
-      background: var(--navy);
+      background: linear-gradient(118deg, var(--navy) 0%, #17233d 64%, #1b2850 100%);
     }
     .operating-method::before {
       position: absolute;
@@ -1070,30 +1129,39 @@
       letter-spacing: -.055em;
       line-height: .98;
     }
-    .who { padding: 122px 0 142px; color: var(--ink); background: #dfe9ff; }
+    .who { padding: 122px 0 142px; color: var(--ink); background: var(--blue-soft); }
     .who .eyebrow { color: var(--blue); }
     .who .section-title { max-width: 830px; }
     .help-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 70px; align-items: stretch; }
     .help-card {
       min-height: 310px;
       padding: 34px;
-      border: 2px solid var(--ink);
-      border-top-width: 8px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--blue);
       border-radius: 0;
       color: var(--ink);
       background: var(--white);
-      box-shadow: 7px 7px 0 var(--ink);
+      box-shadow: 0 18px 50px rgba(17,26,43,.08);
     }
-    .help-card:nth-child(2) { background: var(--green); }
+    .help-card:nth-child(2) { background: var(--white); }
     .help-card:nth-child(3) { border-top-color: var(--blue); }
-    .help-card:hover { transform: translate(2px,2px); border-color: var(--ink); box-shadow: 5px 5px 0 var(--ink); }
-    .help-icon { color: var(--blue); }
-    .help-card h3 { margin-top: 42px; color: var(--ink); font-family: Georgia, serif; font-size: 30px; font-weight: 500; }
+    .help-card:hover { transform: translateY(-3px); border-color: var(--blue); box-shadow: 0 24px 60px rgba(17,26,43,.12); }
+    .help-index {
+      display: inline-block;
+      padding: 6px 8px;
+      color: #fff;
+      background: var(--blue);
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+    .help-card h3 { margin-top: 34px; color: var(--ink); font-family: Georgia, serif; font-size: 30px; font-weight: 500; }
     .help-card p { color: #354255; }
 
     .questions {
       padding: 122px 0 132px;
-      border-top: 2px solid var(--ink);
+      border-top: 1px solid var(--ink);
       color: var(--ink);
       background: var(--white);
     }
@@ -1115,7 +1183,7 @@
     }
     .questions-intro { margin: 28px 0 0; color: #4c596b; font-size: 17px; line-height: 1.65; }
     .questions-intro a { color: var(--ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--green); text-decoration-thickness: 3px; text-underline-offset: 4px; }
-    .question-list { border-top: 2px solid var(--ink); }
+    .question-list { border-top: 1px solid var(--ink); }
     .question {
       border-bottom: 1px solid var(--ink);
       background: var(--white);
@@ -1140,7 +1208,13 @@
     .question[open] summary { color: var(--blue); }
     .question p { max-width: 760px; margin: -4px 52px 0 0; padding: 0 0 26px 4px; color: #4c596b; font-size: 15px; line-height: 1.68; }
 
-    .closing { padding: 104px 0 0; background: var(--blue); }
+    .closing {
+      padding: 104px 0 0;
+      background:
+        linear-gradient(125deg, transparent 0 72%, rgba(49,87,246,.48) 72% 82%, transparent 82%),
+        radial-gradient(circle at 82% 20%, rgba(49,87,246,.26), transparent 28%),
+        var(--navy);
+    }
     .closing-grid { grid-template-columns: 1fr auto; padding-bottom: 88px; border-color: rgba(255,255,255,.26); }
     .closing h2 { max-width: 790px; font-family: Georgia, serif; font-size: clamp(50px, 5vw, 76px); font-weight: 500; line-height: .98; }
     .closing p { color: rgba(255,255,255,.92); }
@@ -1157,17 +1231,17 @@
         width: var(--container);
         margin: 14px auto 0;
         overflow-x: auto;
-        border: 2px solid var(--ink);
-        background: var(--white);
-        box-shadow: 4px 4px 0 var(--green);
+        border: 1px solid rgba(255,255,255,.2);
+        background: var(--navy-2);
+        box-shadow: 4px 4px 0 var(--blue);
         scrollbar-width: none;
       }
       .mobile-section-nav::-webkit-scrollbar { display: none; }
       .mobile-section-nav a {
         flex: 1 0 auto;
         padding: 12px 18px;
-        border-right: 1px solid var(--line);
-        color: var(--ink);
+        border-right: 1px solid rgba(255,255,255,.16);
+        color: #fff;
         font-size: 11px;
         font-weight: 900;
         letter-spacing: .08em;
@@ -1179,10 +1253,10 @@
       .hero-content { grid-template-columns: 1fr; min-height: auto; }
       .connection-report { --report-tilt: 0deg; --report-counter-tilt: 0deg; width: min(100%, 560px); }
       .benefit-grid { grid-template-columns: 1fr; }
-      .benefit { min-height: auto; border-right: 0 !important; border-bottom: 2px solid var(--ink); }
+      .benefit { min-height: auto; border-right: 0 !important; border-bottom: 1px solid var(--line); }
       .managed-intro, .industries-intro, .method-intro, .questions-grid { grid-template-columns: 1fr; }
       .review-sheet { grid-template-columns: 1fr; }
-      .review-copy { min-height: auto; border-right: 0; border-bottom: 2px solid var(--ink); }
+      .review-copy { min-height: auto; border-right: 0; border-bottom: 1px solid var(--ink); }
       .method-steps { grid-template-columns: 1fr; }
       .method-step { min-height: auto; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
       .method-step:last-child { border-bottom: 0; }
@@ -1197,7 +1271,7 @@
       body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
       .header { height: 74px; margin-top: 12px; padding-inline: 14px; }
       .header-call { display: none; }
-      .logo-mark { width: 48px; height: 48px; box-shadow: 3px 3px 0 var(--green); }
+      .logo-mark { width: 48px; height: 48px; box-shadow: 3px 3px 0 var(--blue); }
       .logo-name { font-size: 20px; }
       .logo-tag { display: none; }
       .hero-content { gap: 62px; padding: 72px 0 86px; }
@@ -1205,13 +1279,14 @@
       h1 .hero-answer { margin-top: 9px; }
       .hero-lead { font-size: 18px; }
       .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-assurances { grid-template-columns: 1fr; gap: 10px; }
       .button { width: 100%; }
-      .connection-report { padding: 24px 22px; box-shadow: 8px 9px 0 rgba(17,26,43,.13); }
+      .connection-report { padding: 24px 22px; box-shadow: 8px 9px 0 rgba(49,87,246,.76); }
       .benefit { padding: 42px 5vw; }
       .managed-services, .review-output, .industries, .operating-method, .who, .questions { padding: 92px 0 100px; }
       .service-ledger, .industry-grid, .method-steps { margin-top: 50px; }
       .service-row { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
-      .service-code { font-size: 17px; }
+      .service-code { font-size: 10px; }
       .service-row h3 { font-size: 24px; }
       .provider-details summary { padding: 18px 24px; }
       .provider-groups { grid-template-columns: 1fr; gap: 28px; padding: 26px 24px; }
@@ -1231,7 +1306,7 @@
       .section-title { font-size: clamp(44px, 13vw, 62px); }
       .help-grid { gap: 18px; margin-top: 50px; }
       .help-card { padding: 30px 26px; }
-      .help-card h3 { margin-top: 40px; }
+      .help-card h3 { margin-top: 34px; }
       .questions-grid { gap: 52px; }
       .question summary { padding: 22px 2px; font-size: 21px; }
       .question p { margin-right: 34px; }
@@ -1259,8 +1334,8 @@
           <nav class="primary-nav" aria-label="Primary navigation">
             <a href="#managed-it">Services</a>
             <a href="#difference">Difference</a>
+            <a href="#it-review">IT Review</a>
             <a href="#industries">Industries</a>
-            <a href="#method">Method</a>
           </nav>
           <a class="header-call" href="tel:+18285151530" aria-label="Call ConnectPath at 828-515-1530">
           <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
@@ -1272,8 +1347,8 @@
       <nav class="mobile-section-nav" aria-label="Section navigation">
         <a href="#managed-it">Services</a>
         <a href="#difference">Difference</a>
+        <a href="#it-review">IT Review</a>
         <a href="#industries">Industries</a>
-        <a href="#method">Method</a>
       </nav>
 
       <div id="top" class="hero-content container">
@@ -1291,9 +1366,17 @@
           <div class="hero-contact-lines" role="group" aria-label="ConnectPath phone number">
             <a href="tel:+18285151530"><span>Call ConnectPath</span> (828) 515-1530</a>
           </div>
+          <ul class="hero-assurances" aria-label="ConnectPath operating commitments">
+            <li><span>01</span> One accountable support path</li>
+            <li><span>02</span> The environment written down</li>
+            <li><span>03</span> Vendor handoffs kept visible</li>
+          </ul>
         </div>
         <aside class="connection-report reveal visible" aria-label="What ConnectPath reviews">
-          <p class="report-kicker">The ConnectPath IT review</p>
+          <div class="report-head">
+            <p class="report-kicker">The ConnectPath IT review</p>
+            <span class="report-id" aria-hidden="true">WNC / 01</span>
+          </div>
           <h2>Start with what is already in place.</h2>
           <ul class="report-list">
             <li>Microsoft 365, MFA, and administrator access</li>
@@ -1313,23 +1396,17 @@
     <section class="benefits" aria-label="The ConnectPath approach">
       <div class="container benefit-grid">
         <article class="benefit reveal">
-          <div class="icon-box purple">
-            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.8 6v5.4c0 4.6 3 7.7 7.2 9.6 4.2-1.9 7.2-5 7.2-9.6V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
+          <div class="icon-box" aria-hidden="true"><span>01 / CONTROL</span></div>
           <h2>Start with access.</h2>
           <p>We clean up Microsoft 365 administrator roles, MFA, recovery access, and unmanaged devices before adding another security layer.</p>
         </article>
         <article class="benefit reveal">
-          <div class="icon-box blue">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
-          </div>
+          <div class="icon-box" aria-hidden="true"><span>02 / RECORD</span></div>
           <h2>Write it down.</h2>
           <p>Accounts, equipment, vendors, network details, and recovery steps go into a usable record—not one person’s memory.</p>
         </article>
         <article class="benefit reveal">
-          <div class="icon-box green">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.6 2.6L16.5 9"/></svg>
-          </div>
+          <div class="icon-box" aria-hidden="true"><span>03 / OWNER</span></div>
           <h2>Own the handoff.</h2>
           <p>When a problem crosses a device, network, carrier, or outside vendor, ConnectPath stays responsible for the next step.</p>
         </article>
@@ -1607,17 +1684,17 @@
         </div>
         <div class="help-grid">
           <article class="help-card reveal">
-            <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+            <span class="help-index" aria-hidden="true">FIT / 01</span>
             <h3>Small business teams</h3>
             <p>For organizations where the owner, office manager, or most technical employee has quietly become the default IT department.</p>
           </article>
           <article class="help-card reveal">
-            <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="14" rx="2"/><path d="M8 21V3h8v18M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg>
+            <span class="help-index" aria-hidden="true">FIT / 02</span>
             <h3>Regulated offices</h3>
             <p>For healthcare, legal, and accounting teams that need practical safeguards, reliable recovery, and written evidence of how access is managed.</p>
           </article>
           <article class="help-card reveal">
-            <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01M2 9a14 14 0 0 1 20 0"/></svg>
+            <span class="help-index" aria-hidden="true">FIT / 03</span>
             <h3>Multi-site operations</h3>
             <p>For shops, hospitality groups, and field teams with more than one network, carrier, location, or outside vendor in the mix.</p>
           </article>
