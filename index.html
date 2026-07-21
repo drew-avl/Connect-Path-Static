@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#111a2b" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="description" content="ConnectPath provides managed IT, Microsoft 365, cybersecurity, device management, networks, documentation, and support for Western North Carolina businesses." />
   <meta property="og:title" content="ConnectPath | Managed IT for Western North Carolina" />
   <meta property="og:description" content="Managed IT that fixes the pattern—not just the ticket. Microsoft 365, devices, security, networks, documentation, and support for Western NC businesses." />
@@ -12,15 +13,47 @@
   <meta property="og:site_name" content="ConnectPath" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://connect-path.com/assets/connectpath-social-card-v7.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="ConnectPath managed IT services for Western North Carolina." />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ConnectPath | Managed IT for Western North Carolina" />
+  <meta name="twitter:description" content="Managed IT that fixes the pattern—not just the ticket. Microsoft 365, devices, security, networks, documentation, and support for Western NC businesses." />
   <meta name="twitter:image" content="https://connect-path.com/assets/connectpath-social-card-v7.png" />
+  <meta name="twitter:image:alt" content="ConnectPath managed IT services for Western North Carolina." />
   <link rel="icon" type="image/png" href="assets/connectpath-logo-v2.png" />
   <link rel="apple-touch-icon" href="assets/connectpath-logo-v2.png" />
   <link rel="canonical" href="https://connect-path.com/" />
   <title>Managed IT Services in Western NC | ConnectPath</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://connect-path.com/#business",
+      "name": "ConnectPath",
+      "url": "https://connect-path.com/",
+      "logo": "https://connect-path.com/assets/connectpath-logo-v2.png",
+      "telephone": "+18285151530",
+      "description": "Managed IT, Microsoft 365, cybersecurity, device management, networks, documentation, support, and connectivity services for Western North Carolina businesses.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2520 New Leicester Highway, Ste 9",
+        "addressLocality": "Leicester",
+        "addressRegion": "NC",
+        "postalCode": "28748",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Western North Carolina" },
+        { "@type": "City", "name": "Asheville" },
+        { "@type": "City", "name": "Leicester" },
+        { "@type": "City", "name": "Hendersonville" },
+        { "@type": "City", "name": "Black Mountain" },
+        { "@type": "City", "name": "Weaverville" }
+      ]
+    }
+  </script>
   <style>
     :root {
       --ink: #151a2b;
@@ -217,12 +250,6 @@
       box-shadow: 0 22px 48px rgba(68, 80, 245, 0.38);
       filter: brightness(1.05);
     }
-    .hero-note {
-      color: rgba(244, 246, 253, 0.66);
-      font-size: 16px;
-      white-space: nowrap;
-    }
-
     .benefits {
       border-bottom: 1px solid var(--line);
       background: #fff;
@@ -249,8 +276,7 @@
     .icon-box.blue { color: #5aa8ff; background: #edf7ff; }
     .icon-box.green { color: #59bf68; background: #eff9f1; }
     .benefit h2,
-    .help-card h3,
-    .step h3 {
+    .help-card h3 {
       margin: 0;
       color: var(--ink);
       font-weight: 800;
@@ -265,17 +291,6 @@
       line-height: 1.6;
     }
 
-    .how {
-      padding: 142px 0 150px;
-      background: var(--soft);
-      border-bottom: 1px solid var(--line);
-    }
-    .how-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 110px;
-      align-items: start;
-    }
     .section-title {
       max-width: 650px;
       margin: 0;
@@ -285,43 +300,6 @@
       letter-spacing: -0.052em;
       line-height: 1.08;
     }
-    .section-copy {
-      max-width: 640px;
-      margin: 30px 0 0;
-      color: var(--ink-soft);
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .steps { display: grid; gap: 28px; }
-    .step {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 0;
-      padding: 38px 38px 38px;
-      border: 1px solid #d9dde6;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.82);
-      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-    }
-    .step:hover {
-      transform: translateY(-4px);
-      border-color: #c3c9d7;
-      box-shadow: var(--shadow);
-    }
-    .step-number {
-      color: var(--blue);
-      font-size: 36px;
-      font-weight: 800;
-      line-height: 1;
-    }
-    .step h3 { font-size: 24px; }
-    .step p {
-      margin: 8px 0 0;
-      color: var(--ink-soft);
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
     .who { padding: 122px 0 150px; background: #fff; }
     .who .section-title { max-width: 760px; }
     .help-grid {
@@ -439,7 +417,6 @@
       .hero-copy { width: 86%; }
       .benefit { padding: 46px 30px; }
       .benefit h2 { font-size: 23px; }
-      .how-grid { grid-template-columns: 1fr; gap: 60px; }
       .help-grid { grid-template-columns: 1fr; }
       .help-card { min-height: auto; }
       .closing-grid { grid-template-columns: 1fr; }
@@ -460,17 +437,11 @@
       .hero-lead { margin-top: 26px; font-size: 18px; line-height: 1.6; }
       .hero-actions { align-items: stretch; flex-direction: column; margin-top: 34px; }
       .button { width: 100%; min-height: 62px; padding: 0 24px; font-size: 17px; }
-      .hero-note { text-align: center; font-size: 14px; white-space: normal; }
       .benefit-grid { grid-template-columns: 1fr; }
       .benefit, .benefit:first-child { min-height: auto; border-left: 0; border-right: 0; border-bottom: 1px solid var(--line); padding: 42px 20px; }
       .benefit:last-child { border-bottom: 0; }
-      .how, .who { padding: 92px 0 100px; }
+      .who { padding: 92px 0 100px; }
       .section-title { font-size: clamp(42px, 12vw, 58px); }
-      .section-copy { font-size: 18px; }
-      .step { grid-template-columns: 56px 1fr; padding: 28px 22px; border-radius: 18px; }
-      .step-number { font-size: 29px; }
-      .step h3 { font-size: 21px; }
-      .step p { font-size: 16px; }
       .help-grid { margin-top: 48px; }
       .help-card { padding: 34px 28px; border-radius: 20px; }
       .help-card h3 { font-size: 24px; }
@@ -525,7 +496,7 @@
       transform: translateY(-150%);
     }
     .skip-link:focus { transform: translateY(0); }
-    a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
 
     .hero {
       min-height: auto;
@@ -699,13 +670,6 @@
       letter-spacing: .1em;
       text-transform: uppercase;
     }
-    .hero-note {
-      max-width: 180px;
-      color: var(--ink-soft);
-      font-size: 14px;
-      line-height: 1.45;
-      white-space: normal;
-    }
     .connection-report {
       --report-tilt: 1.2deg;
       --report-counter-tilt: -1.2deg;
@@ -785,194 +749,6 @@
     .icon-box { width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 0; background: #f6f1e7 !important; color: var(--ink) !important; box-shadow: 3px 3px 0 var(--blue); }
     .benefit h2 { margin-top: 32px; font-family: Georgia, "Times New Roman", serif; font-size: 31px; font-weight: 500; letter-spacing: -.035em; }
     .benefit p { color: #354255; font-size: 16px; }
-
-    .partners {
-      padding: 122px 0 132px;
-      color: var(--ink);
-      background: var(--soft);
-      border-bottom: 2px solid var(--ink);
-    }
-    .partners-intro {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: clamp(50px, 8vw, 120px);
-      align-items: end;
-    }
-    .partners .eyebrow { color: var(--blue); }
-    .partners .section-title { max-width: 760px; }
-    .partners-copy {
-      margin: 0;
-      color: #354255;
-      font-size: 19px;
-      line-height: 1.65;
-    }
-    .partners-copy strong { color: var(--ink); }
-    .partner-directory {
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(300px, .85fr);
-      gap: 24px;
-      margin-top: 72px;
-      align-items: stretch;
-    }
-    .partner-main { display: flex; min-width: 0; flex-direction: column; gap: 24px; }
-    .partner-panel {
-      padding: 30px 32px 28px;
-      border: 2px solid var(--ink);
-      background: var(--white);
-      box-shadow: 7px 7px 0 var(--ink);
-    }
-    .partner-panel-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding-bottom: 22px;
-    }
-    .partner-panel h3 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 31px;
-      font-weight: 500;
-      letter-spacing: -.035em;
-    }
-    .partner-badge {
-      padding: 6px 9px;
-      border: 1px solid var(--ink);
-      color: var(--ink);
-      background: var(--green);
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .partner-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin: 0;
-      padding: 0;
-      border-top: 2px solid var(--ink);
-      list-style: none;
-    }
-    .partner-list li {
-      position: relative;
-      padding: 13px 12px 13px 19px;
-      border-bottom: 1px solid var(--line);
-      color: #2c394c;
-      font-size: 15px;
-      font-weight: 750;
-    }
-    .partner-list li::before {
-      content: "";
-      position: absolute;
-      left: 1px;
-      top: 22px;
-      width: 6px;
-      height: 6px;
-      background: var(--blue);
-      transform: rotate(45deg);
-    }
-    .partner-stack { display: grid; gap: 24px; }
-    .partner-stack .partner-panel { box-shadow: 5px 5px 0 var(--ink); }
-    .partner-stack .partner-panel:nth-child(2) { background: #dfe9ff; }
-    .partner-stack .partner-panel:nth-child(3) { background: var(--green); }
-    .partner-stack .partner-panel:nth-child(3) .partner-badge { background: var(--white); }
-    .partner-stack .partner-list { grid-template-columns: 1fr; }
-    .partner-note {
-      margin: 26px 0 0;
-      color: var(--ink-soft);
-      font-size: 13px;
-      line-height: 1.55;
-    }
-    .market-coverage {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(230px, .95fr);
-      gap: clamp(34px, 5vw, 72px);
-      flex: 1;
-      min-height: 320px;
-      padding: 38px 40px;
-      border: 2px solid var(--ink);
-      color: #fff;
-      background: var(--navy);
-      box-shadow: 7px 7px 0 var(--blue);
-      align-items: stretch;
-    }
-    .market-coverage-copy { align-self: end; }
-    .market-coverage .report-kicker { color: var(--green); }
-    .market-coverage h3 {
-      max-width: 520px;
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(37px, 3.6vw, 54px);
-      font-weight: 500;
-      letter-spacing: -.045em;
-      line-height: 1.02;
-    }
-    .market-coverage p {
-      margin: 20px 0 0;
-      color: rgba(255,255,255,.7);
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    .market-coverage-side {
-      display: flex;
-      min-width: 0;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 42px;
-    }
-    .any-provider-badge {
-      display: grid;
-      width: 184px;
-      padding: 17px 20px 18px;
-      border: 2px solid #fff;
-      color: var(--navy);
-      background: var(--green);
-      box-shadow: 6px 6px 0 var(--blue);
-      align-self: end;
-    }
-    .any-provider-badge strong {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 52px;
-      font-weight: 500;
-      letter-spacing: -.055em;
-      line-height: .9;
-      text-transform: uppercase;
-    }
-    .any-provider-badge span {
-      margin-top: 10px;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      line-height: 1.35;
-      text-transform: uppercase;
-    }
-    .comparison-heading {
-      margin: 0 0 12px !important;
-      color: var(--green) !important;
-      font-size: 10px !important;
-      font-weight: 900;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-    .comparison-list {
-      margin: 0;
-      padding: 0;
-      border-top: 1px solid rgba(255,255,255,.35);
-      list-style: none;
-    }
-    .comparison-list li {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 9px;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255,255,255,.2);
-      color: rgba(255,255,255,.84);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .025em;
-    }
-    .comparison-list li::before { color: var(--green); content: "↳"; font-size: 18px; line-height: 1; }
 
     .managed-services {
       padding: 122px 0 132px;
@@ -1133,20 +909,74 @@
       font-size: 18px;
       line-height: 1.1;
     }
-    .it-review-strip {
+    .review-output {
+      padding: 122px 0 132px;
+      border-bottom: 2px solid var(--ink);
+      color: var(--ink);
+      background: #f6f1e7;
+    }
+    .review-sheet {
+      display: grid;
+      grid-template-columns: minmax(300px, .78fr) minmax(0, 1.22fr);
+      border: 2px solid var(--ink);
+      background: var(--white);
+      box-shadow: 9px 9px 0 var(--ink);
+    }
+    .review-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 560px;
+      padding: 46px 42px;
+      border-right: 2px solid var(--ink);
+      background: var(--green);
+    }
+    .review-copy .eyebrow { color: var(--ink); }
+    .review-copy h2 {
+      max-width: 520px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(43px, 4.5vw, 68px);
+      font-weight: 500;
+      letter-spacing: -.055em;
+      line-height: .98;
+    }
+    .review-copy p:last-child {
+      max-width: 470px;
+      margin: 34px 0 0;
+      color: #263348;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    .review-register { margin: 0; padding: 0; list-style: none; }
+    .review-row {
+      display: grid;
+      grid-template-columns: 54px minmax(160px, .72fr) minmax(0, 1.28fr);
+      gap: 22px;
+      align-items: center;
+      min-height: 112px;
+      padding: 24px 30px;
+      border-bottom: 1px solid var(--line);
+    }
+    .review-row:last-child { border-bottom: 0; }
+    .review-row:nth-child(even) { background: rgba(223,233,255,.48); }
+    .review-code { color: var(--blue); font-family: Georgia, serif; font-size: 18px; font-weight: 700; }
+    .review-row h3 { margin: 0; color: var(--ink); font-family: Georgia, serif; font-size: 23px; font-weight: 500; line-height: 1.1; }
+    .review-row p { margin: 0; color: #4c596b; font-size: 14px; line-height: 1.58; }
+    .review-foot {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 34px;
+      gap: 30px;
       align-items: center;
       margin-top: 34px;
-      padding: 30px 34px;
+      padding: 26px 28px;
       border: 2px solid var(--ink);
-      background: var(--green);
+      background: #dfe9ff;
       box-shadow: 7px 7px 0 var(--blue);
     }
-    .it-review-strip h3 { margin: 0; font-family: Georgia, serif; font-size: 31px; font-weight: 500; letter-spacing: -.035em; }
-    .it-review-strip p { margin: 7px 0 0; color: #344052; }
-    .it-review-strip .button { min-height: 54px; color: #fff; background: var(--navy); box-shadow: 5px 5px 0 var(--blue); }
+    .review-foot p { margin: 0; color: #39475a; font-size: 15px; }
+    .review-foot strong { color: var(--ink); }
+    .review-foot a { color: var(--ink); font-size: 14px; font-weight: 900; letter-spacing: .06em; text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 3px; text-underline-offset: 5px; }
 
     .industries {
       padding: 122px 0 136px;
@@ -1175,6 +1005,7 @@
     .industry-card:nth-child(3) .industry-tag { color: var(--ink); }
     .industry-card h3 { max-width: 500px; margin: 20px 0 0; font-family: Georgia, serif; font-size: 30px; font-weight: 500; letter-spacing: -.035em; line-height: 1.12; }
     .industry-card > p:not(.industry-tag) { margin: 18px 0 0; color: #465366; line-height: 1.62; }
+    .industry-card:nth-child(3) > p:not(.industry-tag) { color: var(--ink); }
     .industry-points { display: grid; gap: 0; margin: 28px 0 0; padding: 0; border-top: 2px solid var(--ink); list-style: none; }
     .industry-points li { padding: 12px 0; border-bottom: 1px solid rgba(17,26,43,.18); font-size: 14px; font-weight: 750; }
 
@@ -1213,19 +1044,6 @@
     .method-step h3 { margin: 42px 0 0; color: #fff; font-family: Georgia, serif; font-size: 27px; font-weight: 500; }
     .method-step p { margin: 14px 0 0; color: rgba(255,255,255,.64); font-size: 14px; line-height: 1.58; }
 
-    .how { position: relative; overflow: hidden; padding: 126px 0 136px; color: #fff; background: var(--navy); }
-    .how::before {
-      content: "CONNECT / COMPARE / CLARIFY";
-      position: absolute;
-      right: -25px;
-      top: 38px;
-      color: rgba(255,255,255,.045);
-      font-size: clamp(56px, 7vw, 110px);
-      font-weight: 900;
-      letter-spacing: -.05em;
-      white-space: nowrap;
-    }
-    .how-grid { position: relative; grid-template-columns: .86fr 1.14fr; gap: clamp(70px, 9vw, 150px); }
     .eyebrow {
       display: flex;
       align-items: center;
@@ -1252,22 +1070,6 @@
       letter-spacing: -.055em;
       line-height: .98;
     }
-    .section-copy { color: rgba(255,255,255,.68); font-size: 19px; }
-    .steps { gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
-    .step {
-      grid-template-columns: 58px 1fr;
-      gap: 18px;
-      padding: 30px 0;
-      border: 0;
-      border-bottom: 1px solid rgba(255,255,255,.22);
-      border-radius: 0;
-      background: transparent;
-    }
-    .step:hover { transform: none; box-shadow: none; background: transparent; }
-    .step-number { color: var(--green); font-family: Georgia, serif; font-size: 22px; }
-    .step h3 { color: #fff; font-size: 22px; }
-    .step p { color: rgba(255,255,255,.66); }
-
     .who { padding: 122px 0 142px; color: var(--ink); background: #dfe9ff; }
     .who .eyebrow { color: var(--blue); }
     .who .section-title { max-width: 830px; }
@@ -1289,15 +1091,64 @@
     .help-card h3 { margin-top: 42px; color: var(--ink); font-family: Georgia, serif; font-size: 30px; font-weight: 500; }
     .help-card p { color: #354255; }
 
+    .questions {
+      padding: 122px 0 132px;
+      border-top: 2px solid var(--ink);
+      color: var(--ink);
+      background: var(--white);
+    }
+    .questions-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, .74fr) minmax(0, 1.26fr);
+      gap: clamp(56px, 8vw, 128px);
+      align-items: start;
+    }
+    .questions .eyebrow { color: var(--blue); }
+    .questions h2 {
+      max-width: 560px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 5vw, 72px);
+      font-weight: 500;
+      letter-spacing: -.055em;
+      line-height: .98;
+    }
+    .questions-intro { margin: 28px 0 0; color: #4c596b; font-size: 17px; line-height: 1.65; }
+    .questions-intro a { color: var(--ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--green); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+    .question-list { border-top: 2px solid var(--ink); }
+    .question {
+      border-bottom: 1px solid var(--ink);
+      background: var(--white);
+    }
+    .question summary {
+      display: grid;
+      grid-template-columns: 1fr 30px;
+      gap: 22px;
+      align-items: center;
+      padding: 24px 4px;
+      cursor: pointer;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 1.25;
+      list-style: none;
+    }
+    .question summary::-webkit-details-marker { display: none; }
+    .question summary::after { content: "+"; color: var(--blue); font-family: Arial, sans-serif; font-size: 27px; font-weight: 400; text-align: center; }
+    .question[open] summary::after { content: "−"; }
+    .question[open] summary { color: var(--blue); }
+    .question p { max-width: 760px; margin: -4px 52px 0 0; padding: 0 0 26px 4px; color: #4c596b; font-size: 15px; line-height: 1.68; }
+
     .closing { padding: 104px 0 0; background: var(--blue); }
     .closing-grid { grid-template-columns: 1fr auto; padding-bottom: 88px; border-color: rgba(255,255,255,.26); }
     .closing h2 { max-width: 790px; font-family: Georgia, serif; font-size: clamp(50px, 5vw, 76px); font-weight: 500; line-height: .98; }
-    .closing p { color: rgba(255,255,255,.72); }
+    .closing p { color: rgba(255,255,255,.92); }
     .closing .button { color: var(--navy); background: var(--green); }
-    .footer { padding: 34px 0 38px; color: rgba(255,255,255,.68); }
+    .footer { padding: 34px 0 38px; color: rgba(255,255,255,.92); }
     .footer-disclaimer { max-width: 440px; font-size: 12px; line-height: 1.55; }
 
-    #managed-it, #difference, #industries, #method, #who-we-help, #contact { scroll-margin-top: 24px; }
+    #managed-it, #difference, #it-review, #industries, #method, #who-we-help, #questions, #contact { scroll-margin-top: 24px; }
 
     @media (max-width: 1050px) {
       .primary-nav { display: none; }
@@ -1329,15 +1180,13 @@
       .connection-report { --report-tilt: 0deg; --report-counter-tilt: 0deg; width: min(100%, 560px); }
       .benefit-grid { grid-template-columns: 1fr; }
       .benefit { min-height: auto; border-right: 0 !important; border-bottom: 2px solid var(--ink); }
-      .partners-intro { grid-template-columns: 1fr; }
-      .partner-directory { grid-template-columns: 1fr; }
-      .market-coverage { min-height: auto; }
-      .managed-intro, .industries-intro, .method-intro { grid-template-columns: 1fr; }
+      .managed-intro, .industries-intro, .method-intro, .questions-grid { grid-template-columns: 1fr; }
+      .review-sheet { grid-template-columns: 1fr; }
+      .review-copy { min-height: auto; border-right: 0; border-bottom: 2px solid var(--ink); }
       .method-steps { grid-template-columns: 1fr; }
       .method-step { min-height: auto; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
       .method-step:last-child { border-bottom: 0; }
       .method-step h3 { margin-top: 18px; }
-      .how-grid { grid-template-columns: 1fr; }
       .help-grid { grid-template-columns: 1fr; }
       .help-card, .help-card:nth-child(2), .help-card:nth-child(3) { min-height: auto; margin-top: 0; }
       .closing-grid { grid-template-columns: 1fr; }
@@ -1357,17 +1206,9 @@
       .hero-lead { font-size: 18px; }
       .hero-actions { align-items: stretch; flex-direction: column; }
       .button { width: 100%; }
-      .hero-note { max-width: none; text-align: left; }
       .connection-report { padding: 24px 22px; box-shadow: 8px 9px 0 rgba(17,26,43,.13); }
       .benefit { padding: 42px 5vw; }
-      .partners, .managed-services, .industries, .operating-method, .how, .who { padding: 92px 0 100px; }
-      .partner-directory { gap: 18px; margin-top: 50px; }
-      .partner-panel { padding: 26px 24px 24px; }
-      .partner-panel-head { align-items: flex-start; flex-direction: column; gap: 12px; }
-      .partner-list { grid-template-columns: 1fr; }
-      .market-coverage { grid-template-columns: 1fr; padding: 34px 26px; }
-      .market-coverage-side { gap: 34px; }
-      .any-provider-badge { align-self: start; }
+      .managed-services, .review-output, .industries, .operating-method, .who, .questions { padding: 92px 0 100px; }
       .service-ledger, .industry-grid, .method-steps { margin-top: 50px; }
       .service-row { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
       .service-code { font-size: 17px; }
@@ -1380,16 +1221,20 @@
       .difference-copy { padding: 30px 26px; }
       .difference-list { border-top: 1px solid rgba(255,255,255,.24); border-left: 0; }
       .difference-row { grid-template-columns: 1fr; gap: 9px; min-height: auto; padding: 22px 24px; }
-      .it-review-strip { grid-template-columns: 1fr; padding: 28px 24px; }
-      .it-review-strip .button { width: 100%; }
+      .review-copy { padding: 34px 26px; }
+      .review-row { grid-template-columns: 42px 1fr; gap: 8px 16px; min-height: auto; padding: 24px; }
+      .review-row p { grid-column: 2; }
+      .review-foot { grid-template-columns: 1fr; padding: 24px; }
       .industry-grid { grid-template-columns: 1fr; gap: 18px; }
       .industry-card { padding: 28px 24px; }
       .method-step { padding: 24px 10px; }
       .section-title { font-size: clamp(44px, 13vw, 62px); }
-      .step { grid-template-columns: 44px 1fr; padding: 26px 0; }
       .help-grid { gap: 18px; margin-top: 50px; }
       .help-card { padding: 30px 26px; }
       .help-card h3 { margin-top: 40px; }
+      .questions-grid { gap: 52px; }
+      .question summary { padding: 22px 2px; font-size: 21px; }
+      .question p { margin-right: 34px; }
       .closing { padding-top: 86px; }
       .closing-grid { padding-bottom: 70px; }
       .footer { gap: 24px; }
@@ -1404,7 +1249,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <header class="header container">
         <a class="logo" href="#top" aria-label="ConnectPath home">
-          <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
+          <img class="logo-mark" src="assets/connectpath-logo-v2.png" width="384" height="384" alt="" />
           <span class="logo-copy">
             <span class="logo-name">Connect<span>Path</span></span>
             <span class="logo-tag">Managed IT for Western NC</span>
@@ -1433,9 +1278,9 @@
 
       <div id="top" class="hero-content container">
         <div class="hero-copy reveal visible">
-          <div class="hero-pill">Managed IT for Western NC</div>
+          <div class="hero-pill">Based in Leicester · Serving Western NC</div>
           <h1 id="hero-title"><span class="hero-line">Fix the pattern.</span><span class="hero-line">Not just the ticket.</span><span class="hero-answer">Managed IT for Western NC.</span></h1>
-          <p class="hero-lead">ConnectPath manages Microsoft 365, devices, security, networks, documentation, vendors, and day-to-day support as one operating environment. We look for recurring causes, assign the next step, and leave the business with written answers.</p>
+          <p class="hero-lead">One team takes responsibility for Microsoft 365, devices, security, networks, vendors, and day-to-day support. We trace repeat problems to their source and leave behind documentation your business can actually use.</p>
           <div class="hero-actions">
             <a class="button" href="tel:+18285151530" aria-label="Call ConnectPath for an IT review at 828-515-1530">
               <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
@@ -1443,7 +1288,7 @@
             </a>
             <a class="button button-secondary" href="#difference">See how we work</a>
           </div>
-          <div class="hero-contact-lines" aria-label="ConnectPath phone number">
+          <div class="hero-contact-lines" role="group" aria-label="ConnectPath phone number">
             <a href="tel:+18285151530"><span>Call ConnectPath</span> (828) 515-1530</a>
           </div>
         </div>
@@ -1501,38 +1346,38 @@
           <p class="managed-summary">We start with the details that tend to drift: who has access, which devices are in use, how the network is built, where recovery steps live, and who responds when something breaks.</p>
         </div>
 
-        <div class="service-ledger" aria-label="Managed IT services">
-          <article class="service-row reveal">
+        <div class="service-ledger" role="list" aria-label="Managed IT services">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">ID</span>
             <h3>Microsoft 365 &amp; Identity</h3>
             <p>Entra, MFA, admin cleanup, account lifecycle, shared mailboxes, and safer sign-in.</p>
           </article>
-          <article class="service-row reveal">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">IT</span>
             <h3>Managed IT Support</h3>
             <p>Endpoints, patching, device standards, onboarding and offboarding, with recurring-issue reduction.</p>
           </article>
-          <article class="service-row reveal">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">SEC</span>
             <h3>Cybersecurity Baselines</h3>
             <p>Endpoint protection, least privilege, security reviews, backup validation, and alert routing.</p>
           </article>
-          <article class="service-row reveal">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">NET</span>
             <h3>Network &amp; Infrastructure</h3>
             <p>Switching, Wi-Fi, firewall review, DNS, servers, and the physical path between users and services.</p>
           </article>
-          <article class="service-row reveal">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">DOC</span>
             <h3>Documentation</h3>
             <p>Assets, accounts, vendors, network details, ownership, and recovery steps—written down, not remembered.</p>
           </article>
-          <article class="service-row reveal">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">AUTO</span>
             <h3>Automation &amp; Operations</h3>
             <p>Alerts, tickets, onboarding, and repeated tasks turned into clean, trackable workflows.</p>
           </article>
-          <article class="service-row reveal">
+          <article class="service-row reveal" role="listitem">
             <span class="service-code">TEL</span>
             <h3>Connectivity &amp; Carrier Management</h3>
             <p>Internet sourcing, circuit comparisons, installation coordination, failover planning, and carrier escalation when the connection is part of the problem.</p>
@@ -1582,7 +1427,7 @@
           </details>
         </div>
 
-        <div class="it-difference reveal" id="difference" aria-labelledby="difference-title">
+        <div class="it-difference reveal" id="difference" role="region" aria-labelledby="difference-title">
           <div class="difference-copy">
             <p class="difference-kicker">How ConnectPath is different</p>
             <h3 id="difference-title">Coverage is expected. Ownership is the work.</h3>
@@ -1612,12 +1457,50 @@
           </dl>
         </div>
 
-        <div class="it-review-strip reveal">
-          <div>
-            <h3>Start with the environment you already have.</h3>
-            <p>We document what is in place, flag the gaps that matter, and put the next steps in a useful order.</p>
+      </div>
+    </section>
+
+    <section class="review-output" id="it-review" aria-labelledby="review-title">
+      <div class="container">
+        <div class="review-sheet">
+          <div class="review-copy">
+            <div>
+              <p class="eyebrow">What the IT review produces</p>
+              <h2 id="review-title">A usable map of your environment—not a sales checklist.</h2>
+            </div>
+            <p>The first job is to make the environment legible. We organize what we find so the next decision starts with evidence, an owner, and a sensible order of work.</p>
           </div>
-          <a class="button" href="tel:+18285151530" aria-label="Call ConnectPath at 828-515-1530">Call ConnectPath</a>
+          <ol class="review-register" aria-label="IT review areas">
+            <li class="review-row">
+              <span class="review-code" aria-hidden="true">01</span>
+              <h3>Access register</h3>
+              <p>Administrator roles, MFA coverage, recovery access, and who owns each critical account.</p>
+            </li>
+            <li class="review-row">
+              <span class="review-code" aria-hidden="true">02</span>
+              <h3>Asset baseline</h3>
+              <p>Computers, network equipment, business systems, and the devices that fall outside the standard.</p>
+            </li>
+            <li class="review-row">
+              <span class="review-code" aria-hidden="true">03</span>
+              <h3>Recovery check</h3>
+              <p>What is backed up, what a restore depends on, and which recovery steps still need an owner.</p>
+            </li>
+            <li class="review-row">
+              <span class="review-code" aria-hidden="true">04</span>
+              <h3>Vendor map</h3>
+              <p>Providers, account owners, support paths, and the handoffs that tend to stall when something breaks.</p>
+            </li>
+            <li class="review-row">
+              <span class="review-code" aria-hidden="true">05</span>
+              <h3>Priority register</h3>
+              <p>Immediate risks, recurring problems, and longer-term improvements separated into a practical order.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="review-foot">
+          <p><strong>Already have an IT provider?</strong> The same review can create a clear basis for a second opinion or a better-organized provider change.</p>
+          <a href="tel:+18285151530" aria-label="Call ConnectPath at 828-515-1530 about an IT review">Call (828) 515-1530</a>
         </div>
       </div>
     </section>
@@ -1636,9 +1519,9 @@
           <article class="industry-card reveal">
             <p class="industry-tag">01 — Healthcare</p>
             <h3>Clinics, dental &amp; specialty practices</h3>
-            <p>HIPAA-aware Microsoft 365 hardening, encrypted devices, audit-ready access, and reliable PMS or EHR connectivity.</p>
+            <p>Practical Microsoft 365 safeguards, encrypted devices, clear access records, and reliable PMS or EHR connectivity.</p>
             <ul class="industry-points">
-              <li>HIPAA-aligned Microsoft 365 baseline</li>
+              <li>Microsoft 365 access baseline</li>
               <li>Device encryption and management</li>
               <li>Vendor and PHI documentation</li>
             </ul>
@@ -1646,7 +1529,7 @@
           <article class="industry-card reveal">
             <p class="industry-tag">02 — Legal &amp; Accounting</p>
             <h3>Firms built around confidentiality and deadlines</h3>
-            <p>Tight identity controls, conflict-aware file access, and dependable backups for tax season, closings, and trial preparation.</p>
+            <p>Tight identity controls, role-based file access, and dependable backups for tax season, closings, and trial preparation.</p>
             <ul class="industry-points">
               <li>MFA and administrator cleanup</li>
               <li>Backup validation</li>
@@ -1660,7 +1543,7 @@
             <ul class="industry-points">
               <li>Segmented guest Wi-Fi</li>
               <li>POS and kiosk uptime</li>
-              <li>After-hours response</li>
+              <li>Documented escalation path</li>
             </ul>
           </article>
           <article class="industry-card reveal">
@@ -1686,28 +1569,28 @@
           </div>
           <p class="method-copy">A closed ticket is not much help when the same problem returns next week. We clean up access first, write down the environment, match controls to the actual risk, and turn repeated fixes into standards.</p>
         </div>
-        <div class="method-steps" aria-label="Managed IT operating sequence">
-          <article class="method-step reveal">
+        <div class="method-steps" role="list" aria-label="Managed IT operating sequence">
+          <article class="method-step reveal" role="listitem">
             <span class="method-number">01</span>
             <h3>Assess</h3>
             <p>Identify accounts, assets, vendors, risks, ownership, and failure points.</p>
           </article>
-          <article class="method-step reveal">
+          <article class="method-step reveal" role="listitem">
             <span class="method-number">02</span>
             <h3>Stabilize</h3>
             <p>Fix urgent issues, reduce recurring pain, and establish basic control.</p>
           </article>
-          <article class="method-step reveal">
+          <article class="method-step reveal" role="listitem">
             <span class="method-number">03</span>
             <h3>Harden</h3>
             <p>Implement MFA, safer admin access, endpoint protection, and backups.</p>
           </article>
-          <article class="method-step reveal">
+          <article class="method-step reveal" role="listitem">
             <span class="method-number">04</span>
             <h3>Automate</h3>
             <p>Turn repeated work and alerts into documented, trackable workflows.</p>
           </article>
-          <article class="method-step reveal">
+          <article class="method-step reveal" role="listitem">
             <span class="method-number">05</span>
             <h3>Manage</h3>
             <p>Operate with monitoring, tickets, reviews, and clear accountability.</p>
@@ -1742,10 +1625,42 @@
       </div>
     </section>
 
+    <section class="questions" id="questions" aria-labelledby="questions-title">
+      <div class="container questions-grid">
+        <div>
+          <p class="eyebrow">Before we start</p>
+          <h2 id="questions-title">A few practical questions.</h2>
+          <p class="questions-intro">Every environment has its own history. These are the questions we can answer without turning the conversation into a pitch. For anything specific, <a href="tel:+18285151530" aria-label="call ConnectPath at 828-515-1530">call (828) 515-1530</a>.</p>
+        </div>
+        <div class="question-list">
+          <details class="question">
+            <summary>What happens during an IT review?</summary>
+            <p>We look at access, devices, Microsoft 365, networks, security controls, backups, recurring issues, and vendor dependencies. The findings are organized into what needs attention now, what should come next, and what can wait.</p>
+          </details>
+          <details class="question">
+            <summary>Can ConnectPath work with the vendors we already use?</summary>
+            <p>Yes. A line-of-business application, copier company, carrier, or software vendor can remain part of the environment. ConnectPath documents the support path, coordinates the handoff, and keeps the next step visible.</p>
+          </details>
+          <details class="question">
+            <summary>Do we have to change internet providers?</summary>
+            <p>No. Connectivity is one available service, not the center of the relationship. We review an existing connection when it affects the business, and we can compare available providers when a change is actually useful.</p>
+          </details>
+          <details class="question">
+            <summary>What if we are changing IT providers?</summary>
+            <p>We begin by establishing access, checking backups, identifying devices and vendors, and writing down the current support path. That creates a controlled starting point without depending on one person’s memory.</p>
+          </details>
+          <details class="question">
+            <summary>Where does ConnectPath provide service?</summary>
+            <p>ConnectPath is based in Leicester and serves businesses across Western North Carolina, including Asheville, Hendersonville, Black Mountain, and Weaverville.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="closing" id="contact" aria-labelledby="closing-title">
       <div class="container closing-grid">
         <div class="reveal">
-          <p class="eyebrow" style="color:#c8f45a">Call ConnectPath</p>
+          <p class="eyebrow">Call ConnectPath</p>
           <h2 id="closing-title">Make IT somebody’s job again.</h2>
           <p>Call one number for Microsoft 365, devices, cybersecurity, networks, documentation, and day-to-day support. When the issue crosses vendor lines, ConnectPath keeps the next step moving.</p>
         </div>
@@ -1756,7 +1671,7 @@
       </div>
       <footer class="footer container">
         <a class="logo" href="#top" aria-label="ConnectPath home">
-          <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
+          <img class="logo-mark" src="assets/connectpath-logo-v2.png" width="384" height="384" alt="" />
           <span class="logo-copy">
             <span class="logo-name">Connect<span>Path</span></span>
             <span class="logo-tag">Managed IT for Western NC</span>
@@ -1766,9 +1681,8 @@
         <nav class="footer-links" aria-label="Footer links">
           <a href="tel:+18285151530">Call</a>
           <a href="#managed-it">Services</a>
-          <a href="#difference">Difference</a>
-          <a href="#industries">Industries</a>
-          <a href="#method">Method</a>
+          <a href="#it-review">IT Review</a>
+          <a href="#questions">Questions</a>
         </nav>
       </footer>
     </section>
