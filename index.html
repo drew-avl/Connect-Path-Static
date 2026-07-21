@@ -4,23 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#111a2b" />
-  <meta name="description" content="ConnectPath provides secure, documented managed IT for Western North Carolina businesses, with provider comparison and connectivity sourcing when the connection itself needs attention." />
-  <meta property="og:title" content="ConnectPath | Managed IT and connectivity" />
-  <meta property="og:description" content="Managed Microsoft 365, devices, networks, cybersecurity, documentation, and support—with connectivity sourcing from the same local team." />
+  <meta name="description" content="ConnectPath provides managed IT, Microsoft 365, cybersecurity, device management, networks, documentation, and support for Western North Carolina businesses." />
+  <meta property="og:title" content="ConnectPath | Managed IT for Western North Carolina" />
+  <meta property="og:description" content="Managed IT that fixes the pattern—not just the ticket. Microsoft 365, devices, security, networks, documentation, and support for Western NC businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://connect-path.com/" />
   <meta property="og:site_name" content="ConnectPath" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:image" content="https://connect-path.com/assets/connectpath-social-card-v5.png" />
+  <meta property="og:image" content="https://connect-path.com/assets/connectpath-social-card-v7.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ConnectPath managed IT and connectivity services." />
+  <meta property="og:image:alt" content="ConnectPath managed IT services for Western North Carolina." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://connect-path.com/assets/connectpath-social-card-v5.png" />
+  <meta name="twitter:image" content="https://connect-path.com/assets/connectpath-social-card-v7.png" />
   <link rel="icon" type="image/png" href="assets/connectpath-logo-v2.png" />
   <link rel="apple-touch-icon" href="assets/connectpath-logo-v2.png" />
   <link rel="canonical" href="https://connect-path.com/" />
-  <title>ConnectPath | Managed IT and connectivity</title>
+  <title>Managed IT Services in Western NC | ConnectPath</title>
   <style>
     :root {
       --ink: #151a2b;
@@ -1010,7 +1010,7 @@
       padding: 24px 30px;
       border-bottom: 1px solid var(--line);
     }
-    .service-row:last-child { border-bottom: 0; }
+    .service-row:last-of-type { border-bottom: 0; }
     .service-row:nth-child(2), .service-row:nth-child(5) { background: rgba(223,233,255,.48); }
     .service-code {
       color: var(--blue);
@@ -1027,6 +1027,40 @@
       line-height: 1.1;
     }
     .service-row p { margin: 0; color: #4c596b; font-size: 15px; line-height: 1.58; }
+    .provider-details { border-top: 2px solid var(--ink); background: #f6f1e7; }
+    .provider-details summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 30px;
+      cursor: pointer;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      list-style: none;
+      text-transform: uppercase;
+    }
+    .provider-details summary::-webkit-details-marker { display: none; }
+    .provider-details summary::after { color: var(--blue); content: "+"; font-family: Arial, sans-serif; font-size: 24px; line-height: 1; }
+    .provider-details[open] summary::after { content: "−"; }
+    .provider-details[open] summary { background: var(--green); }
+    .provider-groups {
+      display: grid;
+      grid-template-columns: 1.45fr .9fr .7fr;
+      gap: 34px;
+      padding: 28px 30px 30px;
+      border-top: 1px solid rgba(17,26,43,.18);
+    }
+    .provider-group h4 { margin: 0 0 12px; font-family: Georgia, serif; font-size: 21px; font-weight: 500; }
+    .provider-group h4:not(:first-child) { margin-top: 26px; }
+    .provider-group ul { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+    .provider-group-wide ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+    .provider-group li { color: #4c596b; font-size: 13px; font-weight: 700; }
+    .provider-group li::before { margin-right: 8px; color: var(--blue); content: "▪"; }
+    .provider-note { margin: 0; padding: 0 30px 28px; color: #4c596b; font-size: 13px; line-height: 1.6; }
+    .provider-note strong { color: var(--ink); }
     .it-difference {
       display: grid;
       grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
@@ -1219,13 +1253,6 @@
       line-height: .98;
     }
     .section-copy { color: rgba(255,255,255,.68); font-size: 19px; }
-    .how-call {
-      margin-top: 32px;
-      color: var(--ink);
-      background: var(--green);
-      box-shadow: 5px 5px 0 #fff;
-    }
-    .how-call:hover { color: #fff; background: var(--blue); box-shadow: 3px 3px 0 #fff; }
     .steps { gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
     .step {
       grid-template-columns: 58px 1fr;
@@ -1270,7 +1297,7 @@
     .footer { padding: 34px 0 38px; color: rgba(255,255,255,.68); }
     .footer-disclaimer { max-width: 440px; font-size: 12px; line-height: 1.55; }
 
-    #managed-it, #industries, #method, #connectivity, #how-it-works, #who-we-help, #contact { scroll-margin-top: 24px; }
+    #managed-it, #difference, #industries, #method, #who-we-help, #contact { scroll-margin-top: 24px; }
 
     @media (max-width: 1050px) {
       .primary-nav { display: none; }
@@ -1345,6 +1372,10 @@
       .service-row { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
       .service-code { font-size: 17px; }
       .service-row h3 { font-size: 24px; }
+      .provider-details summary { padding: 18px 24px; }
+      .provider-groups { grid-template-columns: 1fr; gap: 28px; padding: 26px 24px; }
+      .provider-group-wide ul { grid-template-columns: 1fr; }
+      .provider-note { padding: 0 24px 26px; }
       .it-difference { grid-template-columns: 1fr; }
       .difference-copy { padding: 30px 26px; }
       .difference-list { border-top: 1px solid rgba(255,255,255,.24); border-left: 0; }
@@ -1376,15 +1407,15 @@
           <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
           <span class="logo-copy">
             <span class="logo-name">Connect<span>Path</span></span>
-            <span class="logo-tag">Managed IT + connectivity</span>
+            <span class="logo-tag">Managed IT for Western NC</span>
           </span>
         </a>
         <div class="header-actions">
           <nav class="primary-nav" aria-label="Primary navigation">
-            <a href="#managed-it">Managed IT</a>
+            <a href="#managed-it">Services</a>
+            <a href="#difference">Difference</a>
             <a href="#industries">Industries</a>
             <a href="#method">Method</a>
-            <a href="#connectivity">Connectivity</a>
           </nav>
           <a class="header-call" href="tel:+18285151530" aria-label="Call ConnectPath at 828-515-1530">
           <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
@@ -1394,23 +1425,23 @@
       </header>
 
       <nav class="mobile-section-nav" aria-label="Section navigation">
-        <a href="#managed-it">IT services</a>
+        <a href="#managed-it">Services</a>
+        <a href="#difference">Difference</a>
         <a href="#industries">Industries</a>
         <a href="#method">Method</a>
-        <a href="#connectivity">Connectivity</a>
       </nav>
 
       <div id="top" class="hero-content container">
         <div class="hero-copy reveal visible">
           <div class="hero-pill">Managed IT for Western NC</div>
-          <h1 id="hero-title"><span class="hero-line">IT, under control.</span><span class="hero-line">Work keeps moving.</span><span class="hero-answer">Stay connected.</span></h1>
-          <p class="hero-lead">ConnectPath manages Microsoft 365, devices, networks, security, documentation, and day-to-day support for Western North Carolina businesses. When the connection itself is the problem, we handle that too.</p>
+          <h1 id="hero-title"><span class="hero-line">Fix the pattern.</span><span class="hero-line">Not just the ticket.</span><span class="hero-answer">Managed IT for Western NC.</span></h1>
+          <p class="hero-lead">ConnectPath manages Microsoft 365, devices, security, networks, documentation, vendors, and day-to-day support as one operating environment. We look for recurring causes, assign the next step, and leave the business with written answers.</p>
           <div class="hero-actions">
             <a class="button" href="tel:+18285151530" aria-label="Call ConnectPath for an IT review at 828-515-1530">
               <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
               Call for an IT review
             </a>
-            <a class="button button-secondary" href="#connectivity">Compare providers</a>
+            <a class="button button-secondary" href="#difference">See how we work</a>
           </div>
           <div class="hero-contact-lines" aria-label="ConnectPath phone number">
             <a href="tel:+18285151530"><span>Call ConnectPath</span> (828) 515-1530</a>
@@ -1422,7 +1453,7 @@
           <ul class="report-list">
             <li>Microsoft 365, MFA, and administrator access</li>
             <li>Computers, patching, and device standards</li>
-            <li>Networks, Wi-Fi, firewalls, and connectivity</li>
+            <li>Networks, Wi-Fi, firewalls, and failure points</li>
             <li>Security controls, backups, and recovery steps</li>
             <li>Recurring issues, vendors, and documentation</li>
           </ul>
@@ -1501,30 +1532,82 @@
             <h3>Automation &amp; Operations</h3>
             <p>Alerts, tickets, onboarding, and repeated tasks turned into clean, trackable workflows.</p>
           </article>
+          <article class="service-row reveal">
+            <span class="service-code">TEL</span>
+            <h3>Connectivity &amp; Carrier Management</h3>
+            <p>Internet sourcing, circuit comparisons, installation coordination, failover planning, and carrier escalation when the connection is part of the problem.</p>
+          </article>
+          <details class="provider-details">
+            <summary>View direct carrier and service partners</summary>
+            <div class="provider-groups">
+              <div class="provider-group provider-group-wide">
+                <h4>Internet</h4>
+                <ul>
+                  <li>altafiber</li>
+                  <li>AT&amp;T Residential</li>
+                  <li>AT&amp;T Business</li>
+                  <li>Brightspeed</li>
+                  <li>EarthLink</li>
+                  <li>Fidium Fiber</li>
+                  <li>Hawaiian Telcom</li>
+                  <li>Kinetic</li>
+                  <li>Optimum</li>
+                  <li>Optimum Business</li>
+                  <li>Ripple Fiber</li>
+                  <li>Viasat</li>
+                  <li>WOW!</li>
+                  <li>Ziply Fiber</li>
+                </ul>
+              </div>
+              <div class="provider-group">
+                <h4>Video</h4>
+                <ul>
+                  <li>DIRECTV Residential</li>
+                  <li>DIRECTV for Business</li>
+                  <li>DIRECTV Hospitality</li>
+                  <li>DIRECTV Multifamily</li>
+                </ul>
+              </div>
+              <div class="provider-group">
+                <h4>Wireless</h4>
+                <ul>
+                  <li>AT&amp;T Residential</li>
+                  <li>AT&amp;T Business</li>
+                </ul>
+                <h4>Protection</h4>
+                <ul><li>Vivint</li></ul>
+              </div>
+            </div>
+            <p class="provider-note"><strong>Another provider serves your address?</strong> We can compare any available offer—not only direct partners. Availability, service type, pricing, and terms vary by address.</p>
+          </details>
         </div>
 
-        <div class="it-difference reveal" aria-labelledby="difference-title">
+        <div class="it-difference reveal" id="difference" aria-labelledby="difference-title">
           <div class="difference-copy">
-            <p class="difference-kicker">What should feel different</p>
-            <h3 id="difference-title">Fewer repeat problems. More written answers.</h3>
-            <p>Support should leave the business easier to run than it was before the ticket opened.</p>
+            <p class="difference-kicker">How ConnectPath is different</p>
+            <h3 id="difference-title">Coverage is expected. Ownership is the work.</h3>
+            <p>A help desk, patching, monitoring, and security tools are table stakes. The value is what happens between tickets—and whether the environment is easier to support next month than it is today.</p>
           </div>
           <dl class="difference-list">
             <div class="difference-row">
-              <dt>The same issue returns next week</dt>
-              <dd>The root cause becomes a documented fix and standard</dd>
+              <dt>Recurring issues</dt>
+              <dd>We investigate the pattern, document the cause, and turn the fix into a standard</dd>
             </div>
             <div class="difference-row">
-              <dt>Access accumulates as staff changes</dt>
-              <dd>MFA, administrator roles, onboarding, and offboarding get cleaned up</dd>
+              <dt>Microsoft 365 ownership</dt>
+              <dd>Identity, administrator roles, MFA, devices, onboarding, and offboarding are managed as one control set</dd>
             </div>
             <div class="difference-row">
-              <dt>Vendor and recovery details live in one person’s head</dt>
-              <dd>Assets, vendors, ownership, and recovery steps are written down</dd>
+              <dt>Vendor handoffs</dt>
+              <dd>The next step stays visible when an issue crosses a carrier, copier, software vendor, or line-of-business app</dd>
             </div>
             <div class="difference-row">
-              <dt>Security arrives as another bundle of tools</dt>
-              <dd>Controls are prioritized by actual risk and maintained over time</dd>
+              <dt>Business documentation</dt>
+              <dd>Assets, vendors, ownership, and recovery steps are written down so support does not depend on memory</dd>
+            </div>
+            <div class="difference-row">
+              <dt>Technology decisions</dt>
+              <dd>Recommendations are prioritized by operational value and actual risk before another product is added</dd>
             </div>
           </dl>
         </div>
@@ -1633,160 +1716,27 @@
       </div>
     </section>
 
-    <section class="partners" id="connectivity" aria-labelledby="partners-title">
-      <div class="container">
-        <div class="partners-intro reveal">
-          <div>
-            <p class="eyebrow">Connectivity, when you need it</p>
-            <h2 class="section-title" id="partners-title">The right connection, without starting over with another vendor.</h2>
-          </div>
-          <p class="partners-copy"><strong>The providers below work directly with ConnectPath.</strong> If another company serves your address, bring us that offer too. We will compare the price, connection type, equipment, and terms side by side.</p>
-        </div>
-
-        <div class="partner-directory">
-          <div class="partner-main">
-            <article class="partner-panel reveal">
-              <div class="partner-panel-head">
-                <h3>Internet</h3>
-                <span class="partner-badge">Direct partners</span>
-              </div>
-              <ul class="partner-list">
-                <li>altafiber</li>
-                <li>AT&amp;T Residential</li>
-                <li>AT&amp;T Business</li>
-                <li>Brightspeed</li>
-                <li>EarthLink</li>
-                <li>Fidium Fiber</li>
-                <li>Hawaiian Telcom</li>
-                <li>Kinetic</li>
-                <li>Optimum</li>
-                <li>Optimum Business</li>
-                <li>Ripple Fiber</li>
-                <li>Viasat</li>
-                <li>WOW!</li>
-                <li>Ziply Fiber</li>
-              </ul>
-              <p class="partner-note">Provider availability, service type, and offer details vary by address.</p>
-            </article>
-
-            <aside class="market-coverage reveal" aria-labelledby="market-coverage-title">
-              <div class="market-coverage-copy">
-                <p class="report-kicker">Beyond the partner list</p>
-                <h3 id="market-coverage-title">See another provider at your address?</h3>
-                <p>Bring us the offer. We can compare its pricing and terms against the available alternatives—even when that provider is not a direct partner.</p>
-              </div>
-              <div class="market-coverage-side">
-                <div class="any-provider-badge" aria-label="Compare any available provider">
-                  <strong>Any</strong>
-                  <span>available provider</span>
-                </div>
-                <div>
-                  <p class="comparison-heading">What we compare</p>
-                  <ul class="comparison-list" aria-label="Plan details ConnectPath compares">
-                    <li>Promotional price vs. regular rate</li>
-                    <li>Equipment and installation fees</li>
-                    <li>Contracts and data limits</li>
-                    <li>Speed tier and connection type</li>
-                  </ul>
-                </div>
-              </div>
-            </aside>
-          </div>
-
-          <div class="partner-stack">
-            <article class="partner-panel reveal">
-              <div class="partner-panel-head">
-                <h3>Video</h3>
-                <span class="partner-badge">Direct partners</span>
-              </div>
-              <ul class="partner-list">
-                <li>DIRECTV Residential</li>
-                <li>DIRECTV for Business</li>
-                <li>DIRECTV Hospitality</li>
-                <li>DIRECTV Multifamily</li>
-              </ul>
-            </article>
-
-            <article class="partner-panel reveal">
-              <div class="partner-panel-head">
-                <h3>Wireless</h3>
-                <span class="partner-badge">Direct partners</span>
-              </div>
-              <ul class="partner-list">
-                <li>AT&amp;T Residential</li>
-                <li>AT&amp;T Business</li>
-              </ul>
-            </article>
-
-            <article class="partner-panel reveal">
-              <div class="partner-panel-head">
-                <h3>Protection</h3>
-                <span class="partner-badge">Direct partner</span>
-              </div>
-              <ul class="partner-list">
-                <li>Vivint</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="how" id="how-it-works" aria-labelledby="how-title">
-      <div class="container how-grid">
-        <div class="reveal">
-          <p class="eyebrow">Connectivity, simplified</p>
-          <h2 class="section-title" id="how-title">We do the comparing. You keep the decision.</h2>
-          <p class="section-copy">Internet plans are full of temporary prices, equipment charges, and speed tiers that are hard to compare. We organize the options around your address and your needs, then talk through them with you.</p>
-          <a class="button how-call" href="tel:+18285151530" aria-label="Call ConnectPath with your service address at 828-515-1530">Call with your service address</a>
-        </div>
-        <div class="steps">
-          <article class="step reveal">
-            <div class="step-number">01</div>
-            <div>
-              <h3>Tell us what needs to work</h3>
-              <p>Share your address and how the connection will be used—streaming, gaming, remote work, or running a business.</p>
-            </div>
-          </article>
-          <article class="step reveal">
-            <div class="step-number">02</div>
-            <div>
-              <h3>We map the available options</h3>
-              <p>We compare the relevant providers, connection types, plan details, pricing, and terms available for your location.</p>
-            </div>
-          </article>
-          <article class="step reveal">
-            <div class="step-number">03</div>
-            <div>
-              <h3>Get a clear recommendation</h3>
-              <p>We explain the tradeoffs in plain language so you can choose the strongest fit and move forward without second-guessing.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="who" id="who-we-help" aria-labelledby="who-title">
       <div class="container">
         <div class="reveal">
-          <p class="eyebrow">Where ConnectPath fits</p>
-          <h2 class="section-title" id="who-title">One office, three buildings, or a house beyond cable service.</h2>
+          <p class="eyebrow">Best fit</p>
+          <h2 class="section-title" id="who-title">For teams where “who handles IT?” still has too many answers.</h2>
         </div>
         <div class="help-grid">
           <article class="help-card reveal">
             <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
-            <h3>Business teams</h3>
-            <p>A practical IT partner for Microsoft 365, managed devices, security, support, and the carrier underneath it all.</p>
+            <h3>Small business teams</h3>
+            <p>For organizations where the owner, office manager, or most technical employee has quietly become the default IT department.</p>
           </article>
           <article class="help-card reveal">
             <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="14" rx="2"/><path d="M8 21V3h8v18M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg>
-            <h3>Multi-site operations</h3>
-            <p>Offices, shops, remote crews, backup circuits, and specialized systems documented as one operating environment.</p>
+            <h3>Regulated offices</h3>
+            <p>For healthcare, legal, and accounting teams that need practical safeguards, reliable recovery, and written evidence of how access is managed.</p>
           </article>
           <article class="help-card reveal">
             <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01M2 9a14 14 0 0 1 20 0"/></svg>
-            <h3>Home connectivity</h3>
-            <p>A straight comparison for households that stream, work, game, or live beyond the easiest service areas.</p>
+            <h3>Multi-site operations</h3>
+            <p>For shops, hospitality groups, and field teams with more than one network, carrier, location, or outside vendor in the mix.</p>
           </article>
         </div>
       </div>
@@ -1796,8 +1746,8 @@
       <div class="container closing-grid">
         <div class="reveal">
           <p class="eyebrow" style="color:#c8f45a">Call ConnectPath</p>
-          <h2 id="closing-title">Start with the problem nobody seems to own.</h2>
-          <p>Call one number for managed IT, Microsoft 365, devices, security, networks, support, and provider comparisons. When the issue crosses vendor lines, ConnectPath keeps the next step moving.</p>
+          <h2 id="closing-title">Make IT somebody’s job again.</h2>
+          <p>Call one number for Microsoft 365, devices, cybersecurity, networks, documentation, and day-to-day support. When the issue crosses vendor lines, ConnectPath keeps the next step moving.</p>
         </div>
         <a class="button reveal" href="tel:+18285151530">
           <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
@@ -1809,16 +1759,16 @@
           <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
           <span class="logo-copy">
             <span class="logo-name">Connect<span>Path</span></span>
-            <span class="logo-tag">Managed IT + connectivity</span>
+            <span class="logo-tag">Managed IT for Western NC</span>
           </span>
         </a>
-        <span class="footer-disclaimer">© <span id="year"></span> ConnectPath. Provider availability, pricing, and terms vary by address. Connectivity and managed technology services for Western North Carolina. 2520 New Leicester Highway, Ste 9, Leicester, NC 28748.</span>
+        <span class="footer-disclaimer">© <span id="year"></span> ConnectPath. Managed IT services for Western North Carolina. Carrier availability, pricing, and terms vary by address when connectivity sourcing is requested. 2520 New Leicester Highway, Ste 9, Leicester, NC 28748.</span>
         <nav class="footer-links" aria-label="Footer links">
           <a href="tel:+18285151530">Call</a>
-          <a href="#managed-it">Managed IT</a>
+          <a href="#managed-it">Services</a>
+          <a href="#difference">Difference</a>
           <a href="#industries">Industries</a>
           <a href="#method">Method</a>
-          <a href="#connectivity">Connectivity</a>
         </nav>
       </footer>
     </section>
