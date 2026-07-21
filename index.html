@@ -9,6 +9,8 @@
   <meta property="og:description" content="Managed Microsoft 365, devices, networks, cybersecurity, documentation, and support—with connectivity sourcing from the same local team." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://connect-path.com/" />
+  <meta property="og:site_name" content="ConnectPath" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://connect-path.com/assets/connectpath-social-card-v5.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -116,27 +118,6 @@
       pointer-events: none;
       z-index: -2;
     }
-    .hero-lines {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.72;
-      pointer-events: none;
-    }
-    .hero-watermark {
-      position: absolute;
-      width: min(44vw, 690px);
-      left: 31%;
-      top: -4%;
-      opacity: 0.035;
-      filter: grayscale(1) brightness(2.8);
-      transform: rotate(-7deg);
-      pointer-events: none;
-      z-index: -1;
-    }
-
     .header {
       display: flex;
       align-items: center;
@@ -236,8 +217,6 @@
       box-shadow: 0 22px 48px rgba(68, 80, 245, 0.38);
       filter: brightness(1.05);
     }
-    .button .arrow { transition: transform .2s ease; }
-    .button:hover .arrow { transform: translateX(4px); }
     .hero-note {
       color: rgba(244, 246, 253, 0.66);
       font-size: 16px;
@@ -454,13 +433,6 @@
       font-weight: 800;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
     @media (max-width: 1050px) {
       :root { --container: min(90vw, 920px); }
       .hero { min-height: 790px; }
@@ -489,7 +461,6 @@
       .hero-actions { align-items: stretch; flex-direction: column; margin-top: 34px; }
       .button { width: 100%; min-height: 62px; padding: 0 24px; font-size: 17px; }
       .hero-note { text-align: center; font-size: 14px; white-space: normal; }
-      .hero-watermark { width: 90vw; left: 26%; top: 3%; }
       .benefit-grid { grid-template-columns: 1fr; }
       .benefit, .benefit:first-child { min-height: auto; border-left: 0; border-right: 0; border-bottom: 1px solid var(--line); padding: 42px 20px; }
       .benefit:last-child { border-bottom: 0; }
@@ -517,7 +488,6 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-      .reveal { opacity: 1; transform: none; }
     }
 
     /* ConnectPath editorial system */
@@ -569,8 +539,6 @@
     .hero::before {
       background: linear-gradient(122deg, transparent 62%, rgba(49,87,246,.075) 62%, rgba(49,87,246,.075) 72%, transparent 72%);
     }
-    .hero-lines, .hero-watermark { display: none; }
-
     .header {
       position: relative;
       z-index: 5;
@@ -738,8 +706,6 @@
       line-height: 1.45;
       white-space: normal;
     }
-    .arrow { font-family: Arial, sans-serif; }
-
     .connection-report {
       --report-tilt: 1.2deg;
       --report-counter-tilt: -1.2deg;
@@ -810,14 +776,14 @@
     .benefits { border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: var(--white); }
     .benefit-grid { grid-template-columns: 1.2fr 1fr .9fr; }
     .benefit {
-      min-height: 320px;
-      padding: 48px 42px;
+      min-height: 286px;
+      padding: 44px 42px;
       border-color: var(--ink) !important;
     }
     .benefit:nth-child(2) { background: #e5edff; }
     .benefit:nth-child(3) { background: var(--green); }
-    .icon-box { width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 50%; background: transparent !important; color: var(--ink) !important; }
-    .benefit h2 { margin-top: 38px; font-family: Georgia, "Times New Roman", serif; font-size: 30px; font-weight: 500; letter-spacing: -.035em; }
+    .icon-box { width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 0; background: #f6f1e7 !important; color: var(--ink) !important; box-shadow: 3px 3px 0 var(--blue); }
+    .benefit h2 { margin-top: 32px; font-family: Georgia, "Times New Roman", serif; font-size: 31px; font-weight: 500; letter-spacing: -.035em; }
     .benefit p { color: #354255; font-size: 16px; }
 
     .partners {
@@ -1253,6 +1219,13 @@
       line-height: .98;
     }
     .section-copy { color: rgba(255,255,255,.68); font-size: 19px; }
+    .how-call {
+      margin-top: 32px;
+      color: var(--ink);
+      background: var(--green);
+      box-shadow: 5px 5px 0 #fff;
+    }
+    .how-call:hover { color: #fff; background: var(--blue); box-shadow: 3px 3px 0 #fff; }
     .steps { gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
     .step {
       grid-template-columns: 58px 1fr;
@@ -1271,21 +1244,22 @@
     .who { padding: 122px 0 142px; color: var(--ink); background: #dfe9ff; }
     .who .eyebrow { color: var(--blue); }
     .who .section-title { max-width: 830px; }
-    .help-grid { grid-template-columns: 1.15fr .9fr 1.05fr; gap: 22px; margin-top: 70px; align-items: start; }
+    .help-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 70px; align-items: stretch; }
     .help-card {
-      min-height: 330px;
+      min-height: 310px;
       padding: 34px;
       border: 2px solid var(--ink);
+      border-top-width: 8px;
       border-radius: 0;
       color: var(--ink);
       background: var(--white);
       box-shadow: 7px 7px 0 var(--ink);
     }
-    .help-card:nth-child(2) { margin-top: 48px; background: var(--green); }
-    .help-card:nth-child(3) { margin-top: -22px; }
+    .help-card:nth-child(2) { background: var(--green); }
+    .help-card:nth-child(3) { border-top-color: var(--blue); }
     .help-card:hover { transform: translate(2px,2px); border-color: var(--ink); box-shadow: 5px 5px 0 var(--ink); }
     .help-icon { color: var(--blue); }
-    .help-card h3 { margin-top: 52px; color: var(--ink); font-family: Georgia, serif; font-size: 30px; font-weight: 500; }
+    .help-card h3 { margin-top: 42px; color: var(--ink); font-family: Georgia, serif; font-size: 30px; font-weight: 500; }
     .help-card p { color: #354255; }
 
     .closing { padding: 104px 0 0; background: var(--blue); }
@@ -1296,7 +1270,7 @@
     .footer { padding: 34px 0 38px; color: rgba(255,255,255,.68); }
     .footer-disclaimer { max-width: 440px; font-size: 12px; line-height: 1.55; }
 
-    .reveal { opacity: 1; transform: none; }
+    #managed-it, #industries, #method, #connectivity, #how-it-works, #who-we-help, #contact { scroll-margin-top: 24px; }
 
     @media (max-width: 1050px) {
       .primary-nav { display: none; }
@@ -1344,7 +1318,7 @@
 
     @media (max-width: 760px) {
       :root { --container: min(90vw, 1320px); }
-      body { padding-bottom: 76px; }
+      body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
       .header { height: 74px; margin-top: 12px; padding-inline: 14px; }
       .header-call { display: none; }
       .logo-mark { width: 48px; height: 48px; box-shadow: 3px 3px 0 var(--green); }
@@ -1389,7 +1363,7 @@
       .closing-grid { padding-bottom: 70px; }
       .footer { gap: 24px; }
       .footer-disclaimer { max-width: none; }
-      .mobile-call { left: 0; right: 0; bottom: 0; border-radius: 0; background: var(--green); color: var(--navy); box-shadow: 0 -3px 0 var(--navy); }
+      .mobile-call { left: 0; right: 0; bottom: 0; min-height: calc(62px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); border-radius: 0; background: var(--green); color: var(--navy); box-shadow: 0 -3px 0 var(--navy); }
     }
   </style>
 </head>
@@ -1397,23 +1371,6 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
-      <svg class="hero-lines" viewBox="0 0 1700 860" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="lineBlue" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#18b9ee" stop-opacity="0"/>
-            <stop offset=".48" stop-color="#4a57ff" stop-opacity=".22"/>
-            <stop offset="1" stop-color="#67b0ff" stop-opacity=".34"/>
-          </linearGradient>
-          <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
-        </defs>
-        <path d="M-220 760 C 120 340, 450 160, 650 290 S 850 760, 1390 915" fill="none" stroke="url(#lineBlue)" stroke-width="2"/>
-        <path d="M-180 770 C 140 380, 430 210, 620 310 S 840 785, 1430 930" fill="none" stroke="#18b9ee" stroke-opacity=".13" stroke-width="12" filter="url(#blur)"/>
-        <path d="M540 -120 C 520 110, 620 430, 900 650 S 1300 820, 1710 940" fill="none" stroke="#67b0ff" stroke-opacity=".13" stroke-width="3"/>
-        <path d="M590 -140 C 560 130, 655 430, 950 660 S 1340 840, 1750 980" fill="none" stroke="#4a57ff" stroke-opacity=".14" stroke-width="4"/>
-        <path d="M515 -90 C 500 150, 585 460, 865 675 S 1260 850, 1650 950" fill="none" stroke="#5cc56a" stroke-opacity=".08" stroke-width="5"/>
-      </svg>
-      <img class="hero-watermark" src="assets/connectpath-logo-v2.png" alt="" aria-hidden="true" />
-
       <header class="header container">
         <a class="logo" href="#top" aria-label="ConnectPath home">
           <img class="logo-mark" src="assets/connectpath-logo-v2.png" alt="" />
@@ -1439,6 +1396,7 @@
       <nav class="mobile-section-nav" aria-label="Section navigation">
         <a href="#managed-it">IT services</a>
         <a href="#industries">Industries</a>
+        <a href="#method">Method</a>
         <a href="#connectivity">Connectivity</a>
       </nav>
 
@@ -1451,7 +1409,6 @@
             <a class="button" href="tel:+18285151530" aria-label="Call ConnectPath for an IT review at 828-515-1530">
               <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
               Call for an IT review
-              <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="button button-secondary" href="#connectivity">Compare providers</a>
           </div>
@@ -1483,22 +1440,22 @@
           <div class="icon-box purple">
             <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.8 6v5.4c0 4.6 3 7.7 7.2 9.6 4.2-1.9 7.2-5 7.2-9.6V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <h2>Secure</h2>
-          <p>Clean up sign-ins, administrator access, devices, networks, and backups before adding another security product.</p>
+          <h2>Start with access.</h2>
+          <p>We clean up Microsoft 365 administrator roles, MFA, recovery access, and unmanaged devices before adding another security layer.</p>
         </article>
         <article class="benefit reveal">
           <div class="icon-box blue">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
           </div>
-          <h2>Document</h2>
-          <p>Record the assets, accounts, vendors, network details, ownership, and recovery steps the business depends on.</p>
+          <h2>Write it down.</h2>
+          <p>Accounts, equipment, vendors, network details, and recovery steps go into a usable record—not one person’s memory.</p>
         </article>
         <article class="benefit reveal">
           <div class="icon-box green">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.6 2.6L16.5 9"/></svg>
           </div>
-          <h2>Manage</h2>
-          <p>Fix recurring problems, standardize routine work, and give every issue a visible owner and next step.</p>
+          <h2>Own the handoff.</h2>
+          <p>When a problem crosses a device, network, carrier, or outside vendor, ConnectPath stays responsible for the next step.</p>
         </article>
       </div>
     </section>
@@ -1587,9 +1544,9 @@
         <div class="industries-intro reveal">
           <div>
             <p class="eyebrow">Industries we know</p>
-            <h2 class="section-title" id="industries-title">Built for the way Western NC businesses actually operate.</h2>
+            <h2 class="section-title" id="industries-title">Western NC businesses rarely run on one clean system.</h2>
           </div>
-          <p class="industries-copy">Small teams often depend on a mix of cloud accounts, specialized vendors, aging hardware, and procedures that only one person knows. That is the reality we plan around.</p>
+          <p class="industries-copy">A small team can still depend on an EHR, a POS, a remote office, a third-party vendor, aging equipment, and a password nobody wants to touch. We plan around the environment that actually exists.</p>
         </div>
 
         <div class="industry-grid">
@@ -1775,12 +1732,13 @@
       </div>
     </section>
 
-    <section class="how" id="how-it-works">
+    <section class="how" id="how-it-works" aria-labelledby="how-title">
       <div class="container how-grid">
         <div class="reveal">
           <p class="eyebrow">Connectivity, simplified</p>
-          <h2 class="section-title">We do the comparing. You keep the decision.</h2>
+          <h2 class="section-title" id="how-title">We do the comparing. You keep the decision.</h2>
           <p class="section-copy">Internet plans are full of temporary prices, equipment charges, and speed tiers that are hard to compare. We organize the options around your address and your needs, then talk through them with you.</p>
+          <a class="button how-call" href="tel:+18285151530" aria-label="Call ConnectPath with your service address at 828-515-1530">Call with your service address</a>
         </div>
         <div class="steps">
           <article class="step reveal">
@@ -1808,27 +1766,27 @@
       </div>
     </section>
 
-    <section class="who" id="who-we-help">
+    <section class="who" id="who-we-help" aria-labelledby="who-title">
       <div class="container">
         <div class="reveal">
-          <p class="eyebrow">Who we help</p>
-          <h2 class="section-title">Built for small teams, complicated sites, and the people working from home.</h2>
+          <p class="eyebrow">Where ConnectPath fits</p>
+          <h2 class="section-title" id="who-title">One office, three buildings, or a house beyond cable service.</h2>
         </div>
         <div class="help-grid">
           <article class="help-card reveal">
             <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
-            <h3>Small businesses</h3>
-            <p>One phone number for Microsoft 365, managed devices, cybersecurity, networks, documentation, support, and the carrier underneath it all.</p>
+            <h3>Business teams</h3>
+            <p>A practical IT partner for Microsoft 365, managed devices, security, support, and the carrier underneath it all.</p>
           </article>
           <article class="help-card reveal">
             <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="14" rx="2"/><path d="M8 21V3h8v18M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg>
-            <h3>Complex locations</h3>
-            <p>Multiple buildings, remote crews, rural service, a backup circuit, or specialized systems: we document the physical reality and build around it.</p>
+            <h3>Multi-site operations</h3>
+            <p>Offices, shops, remote crews, backup circuits, and specialized systems documented as one operating environment.</p>
           </article>
           <article class="help-card reveal">
             <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01M2 9a14 14 0 0 1 20 0"/></svg>
-            <h3>Homes</h3>
-            <p>A connection sized for the way your household streams, works, games, and uses smart-home devices, without paying for a tier you do not need.</p>
+            <h3>Home connectivity</h3>
+            <p>A straight comparison for households that stream, work, game, or live beyond the easiest service areas.</p>
           </article>
         </div>
       </div>
@@ -1837,9 +1795,9 @@
     <section class="closing" id="contact" aria-labelledby="closing-title">
       <div class="container closing-grid">
         <div class="reveal">
-          <p class="eyebrow" style="color:#c8f45a">Start with what is unclear</p>
-          <h2 id="closing-title">Tell us what needs to connect—or what needs to work better.</h2>
-          <p>One number for managed IT, Microsoft 365, devices, security, networks, documentation, support, and provider comparisons. Serving Western North Carolina from Leicester.</p>
+          <p class="eyebrow" style="color:#c8f45a">Call ConnectPath</p>
+          <h2 id="closing-title">Start with the problem nobody seems to own.</h2>
+          <p>Call one number for managed IT, Microsoft 365, devices, security, networks, support, and provider comparisons. When the issue crosses vendor lines, ConnectPath keeps the next step moving.</p>
         </div>
         <a class="button reveal" href="tel:+18285151530">
           <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>
@@ -1874,20 +1832,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const revealItems = document.querySelectorAll('.reveal:not(.visible)');
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -45px' });
-      revealItems.forEach((item) => observer.observe(item));
-    } else {
-      revealItems.forEach((item) => item.classList.add('visible'));
-    }
   </script>
 </body>
 </html>
